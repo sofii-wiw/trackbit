@@ -167,4 +167,71 @@ h2{
   flex-direction: row;
   align-items: center;
 }
+@media (max-width: 450px) {
 
+  body {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrap {
+    width: fit-content;
+    padding: 12px;
+    border-radius: 25px;
+    box-shadow:
+      5px 5px 15px rgba(183, 28, 75, 0.2);
+  }
+
+.db{
+  max-width: 100%;
+  font-size: 12px;
+}
+  .db-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hmp-btn,
+  .abt-btn,
+  .tck-btn {
+    width: fit-content;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+
+  .intro {
+    width: 300px;
+    max-width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  .wc {
+    max-width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    text-shadow: 4px 3px 6px #d02675;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .stckrs img{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 29%;
+  height: auto;
+  margin: 0 auto 50px;
+}
+}
