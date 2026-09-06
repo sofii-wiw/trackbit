@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A simple and effective habit tracker to help you stay on track with your goals.">
+        <meta name="keywords" content="habit tracker, productivity, goals, reminders, task management">
+        <meta name="author" content="wiw">
+        <title>Habit Tracker</title>
+        <link rel="stylesheet" href="trackers.css">
+    </head>
+    
+<body>
+    <header>
+        <h1 class="ht">꒰ა♡໒꒱━━━༺♡༻.habit tracker.༺♡༻━━━꒰ა♡໒꒱</h1>
+        <p class="go-back">go back</p>
+    </header>
+
+    <main>
+
+        <select id="filter-category">
+            <option value="all">all categories</option>
+        </select>
+
+        <section id="habit-list">
+            <h2>˗ˏ`꒰your habits꒱ˎˊ˗</h2>
+        
+        </section>
+
+        <section id="add-habit">
+            <h2>˚₊‧꒰ა ──add new habit── ໒꒱‧₊˚</h2>
+            <form id="habit-form">
+                <input type="text" id="habit-name" placeholder="Enter habit name" required>
+                <select id="habit-category">
+                    <option value="health">Health</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="learning">Learning</option>
+                </select>
+                <select id="habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">ᰔ.Add Habit.ᰔ</button>
+            </form>
+        </section>
+        
+        <section id="edit-habit">
+            <h2>Edit Habit</h2>
+            <form id="edit-habit-form">
+                <input type="text" id="edit-habit-name" placeholder="Enter habit name" required>
+                <select id="edit-habit-category">
+                    <option value="health">Health</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="learning">Learning</option>
+                </select>
+                <select id="edit-habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">ᰔ.Save Changes.ᰔ</button>
+                <button type="button" id="cancel-edit">─Cancel─</button>
+            </form>
+        </section>
+
+        <section id="category-management">
+            <h2>˚₊‧꒰ა ──Manage Categories── ໒꒱‧₊˚</h2>
+            <form id="category-form">
+                <input type="text" id="new-category" placeholder="New category name" required>
+                <button type="submit">ᰔ.Add Category.ᰔ</button>
+            </form>
+            <div id="category-list"></div>
+        </section>
+        
+        <section id="reminders">
+            <h2>˚₊‧꒰ა ──Habit Reminders── ໒꒱‧₊˚</h2>
+            <form id="reminder-form">
+                <select id="reminder-habit">    
+                </select>
+                <input type="time" id="reminder-time" required>
+                <select id="reminder-frequency">
+                    <option value="once">Once</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button type="submit">ᰔ.Set Reminder.ᰔ</button>
+            </form>
+            <div id="reminder-list"></div>
+        </section>      
+
+        <section id="settings">
+            <h2>˚₊‧꒰ა ──Settings── ໒꒱‧₊˚</h2>
+            <div id="settings-content">
+                <button id="clear-data">ᰔ.Clear All Data.ᰔ</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img class="cat" src="https://drive.google.com/thumbnail?id=17iqP4jX_v9NiUyv4jLfKcvE7JAqShB0T">         
+        <p>trackbit</p>
+         <img class="cat2" src="https://drive.google.com/thumbnail?id=17iqP4jX_v9NiUyv4jLfKcvE7JAqShB0T"> 
+    </footer>        
+    <script src="trackers.js"></script>
+</body>
+</html>
+
+
+

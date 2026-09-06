@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: lowercase;
+}
+
+
+html{
+  position: relative;
+  background-image: url(https://i.pinimg.com/originals/d5/92/83/d5928332b517070db3ebcb92149cf40b.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  border: #951562, 4px, solid;
+  border-radius: 50px;
+  background-color: #aa00473a;
+}
+
+h1{
+  color: #d40058;
+  font-size: 47px;
+  margin-top: -20px;
+  border: #ff9ec6, 3px, dotted;
+  background-color: #fed7e8;
+  border-radius: 90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+a{
+   font-size: 25px;
+    color: #ffcde0;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ff1f75d4;
+    border: 5px, #ff7fa8;
+    max-width: 300px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px;
+    margin-right: 90%;
+}
+
+h2{
+    margin: 30px;
+    max-width: 90%;
+    font-size: 30px;
+    color: #59001f;
+    text-shadow: 5px 0 5px #ee5b8f;
+    max-height: fit-content;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: left;
+    background: #ff007731;
+    border: 3px solid #b13462;
+    box-shadow: 6px 6px  #7b083c;
+}
+
+.cats{
+  font-size: xx-large;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cats:hover{
+  transform: rotate3d(3px);
+  
+}
+
+.wrap{
+  max-width: 1000%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 60px;
+  box-shadow: 20px 10px 20px 10px rgba(183, 28, 75, 0.152);
+}
+
+
+.features,
+.how {
+    list-style: none;
+    margin: 10px;
+    max-width: 900px;
+    max-height: fit-content;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: left;
+    background: #2f1521;
+    border: 3px solid #b13462;
+    box-shadow: 6px 6px 0 #12090d;
+}
+
+.features li{
+    margin: 12px ;
+    padding: 10px;
+    max-width: 100%;
+    list-style: none;
+    font-size: 22px;
+    color: #f3d7ee;
+    background: #3e102b;
+    border-left: 4px solid #c81867;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.features::before{
+  content: "𐔌՞. features .՞𐦯";
+  color: #d8799d;
+  font-size: xx-large;
+  display: grid;
+  text-align: center;
+}
+
+.how li {
+    margin: 12px ;
+    padding: 10px;
+    max-width: 1000px;
+    max-height: fit-content;
+    list-style: none;
+    font-size: 20px;
+    color: #f3d7ee;
+    background: #3e102b;
+    border-left: 4px solid #c81867;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.how::before{
+  content: "𐔌՞. what to do .՞𐦯";
+  color: #d8799d;
+  font-size: xx-large;
+  display: grid;
+  text-align: center;
+}
+
+.features li::before,
+.how li::before {
+    content: "♡ ";
+    color: #ff4897;
+}
+
+.features li:hover,
+.how li:hover {
+    transform: translateX(5px);
+    background: #4f1a2d;
+    color: #ff85ae;
+    box-shadow: 0 0 8px #b75aaa;
+}
+
+
+
+.about {
+    display: block;
+    color: #ffafe9;
+    font-size: 25px;
+    width: 90%;
+    border-radius: 40px;
+    max-width: fit-content;
+    margin: 30px auto;
+    padding: 20px;
+    list-style: none;
+    background: #29121d;
+    border: 3px double #d8799d;
+    box-shadow: 0 0 12px rgba(216, 121, 165, 0.4);
+    cursor: pointer;
+}
+
+.about li:hover{
+    max-width: 1000px;
+    font-size: 30px;
+    transform: translate3d(-10px);
+    background: #4f1a2d;
+    color: #ff85ae;
+    box-shadow: 10px 8px 8px #b65376;
+    transition: 0.4s ease;
+}
+
+.about::before{
+  font-size: 30px;
+  content: "𐔌՞.about the creator .՞𐦯 ";
+}
+
+.about li::before {
+    margin: 8px 0;
+    font-size: 21px;
+    color: #eac7df;
+}
+
+.about li::before{
+  content: "✦ ";
+  color: #c81867;
+}
+
+.brd2{
+  padding: 10px;
+  color: #951562;
+  border: 2px, darkred;
+  text-align: center;
+  font-size: large;
+}
+
+.stckrs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer {
+    margin-top: 35px;
+    padding: 10px;
+    color: #ffa7d4;
+    background-color: #bb09595e;
+    border-radius: 5cqi;
+    font-size: 24px;
+    text-shadow: 0 0 6px #9d4473;
+    cursor: pointer;
+    
+}
+
+footer:hover{
+    font-size: xx-large;
+    transform: translateY(-20px);
+    background: #4f1a2d;
+    color: #ff85ae;
+    transition: 0.4s ease;
+    box-shadow: 10px 8px 8px #b65376;
+}
+
+

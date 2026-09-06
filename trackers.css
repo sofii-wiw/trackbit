@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');    
+
+*{  
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: lowercase;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff94b4, #ffb6cc, #ff77a4);
+    color: #5a3a45;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+.go-back {
+    font-size: 15px;
+    color: #ff2277;
+    font-weight: bold;
+    background-color: #ffeaf2b6;
+    border: 5px, #ff7fa8;
+    max-width: 100px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ht {
+    font-size: 42px;
+    margin: 0;
+    text-transform: lowercase;
+    font-family: 'Poppins', sans-serif;
+    color: #ED4E6E;
+    padding: 20px;
+    border: solid, 4px;
+    border-radius: 30px;
+    max-width: 900vh;
+    max-height: 300px;
+    background-color: rgb(255, 201, 212);
+}
+
+#habit-list h2{
+    color: #e93f6f;
+    margin: 5px;
+    padding: 20px;
+    border: #ff6b93, solid, .5vh;
+    border-radius: 20px;
+    background:linear-gradient(90deg, #ffa6be, #ffc7d1, #ffa6be);
+    max-width: 200vh;
+    max-height: 100vh;
+    font-size: xx-large;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(180, 80, 110, 0.12);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(180, 80, 110, 0.12);
+}
+
+
+
+#filter-category {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+    color: #ffe7e6;
+    font-weight: bold;
+    background-color: #ec0056;
+    border: 2px, #ff7f7f;
+}
+
+
+#habit-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    background: transparent;
+    box-shadow: 0 2px 3px(darkred);
+    padding: 10px 0;
+}
+
+
+
+.habit {
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #fff5f8);
+    border: 2px solid #f6c1d0;
+    border-radius: 22px;
+    padding: 22px;
+    min-height: 230px;
+
+    box-shadow:
+        0 8px 20px rgba(205, 90, 120, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.habit:hover {
+    transform: translateY(-6px);
+    border-color: #e98aa5;
+
+    box-shadow:
+        0 15px 30px rgba(205, 90, 120, 0.22);
+}
+
+
+.habit h3 {
+    margin: 0 0 15px;
+    font-size: 21px;
+    color: #c64f71;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+
+.badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 5px 9px;
+
+    background: #ffdae5;
+    color: #d44770;
+
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow: 0 3px 8px rgba(210, 70, 110, 0.15);
+}
+
+
+
+.progress {
+    width: 100%;
+    height: 13px;
+    background: #f8dce5;
+    border-radius: 20px;
+    margin: 15px 0 20px;
+}
+
+.progress-bar {
+    display: block;
+    height: 50%;
+
+    background: linear-gradient(
+        90deg,
+        #ff7f9f,
+        #ffabc0
+    );
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+.habit button {
+    border: none;
+    border-radius: 10px;
+    padding: 9px 13px;
+    margin: 4px 3px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.complete-btn {
+    background: #ff8fab;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #f36f94;
+    transform: scale(1.04);
+}
+
+
+.edit-btn {
+    background: #ffd3df;
+    color: #9d4660;
+}
+
+.edit-btn:hover {
+    background: #ffc0d1;
+    transform: scale(1.04);
+}
+
+
+.remove-btn {
+    background: #ffe8ee;
+    color: #c94c6d;
+}
+
+.remove-btn:hover {
+    background: #ffcbd8;
+    transform: scale(1.04);
+}
+
+
+#habit-form,
+#edit-habit-form,
+#category-form,
+#reminder-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 12px 14px;
+    border: 2px solid #f3bfd0;
+    border-radius: 10px;
+    background: white;
+    color: #633f4b;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #e982a1;
+    box-shadow: 0 0 0 3px rgba(233, 130, 161, 0.15);
+}
+
+#habit-form input {
+    flex: 1;
+    min-width: 200px;
+}
+
+
+#habit-form button,
+#edit-habit-form button,
+#category-form button,
+#reminder-form button {
+    border: solid, rgb(255, 157, 185), 2px;
+    border-radius: 10px;
+    padding: 12px 18px;
+
+    background: #e87898;
+    color: white;
+
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 0 0 3px rgba(233, 130, 161, 0.15);
+}
+
+#habit-form button:hover,
+#edit-habit-form button:hover,
+#category-form button:hover,
+#reminder-form button:hover {
+    background: #b6254c;
+    transform: translateY(-3px);
+}
+
+
+#edit-habit {
+    display: none;
+}
+
+
+
+#category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #fff0f5;
+    border: 1px solid #f4b7c8;
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+
+.category-item button {
+    border: none;
+    background: #ffb3c7;
+    color: #8e4055;
+    border-radius: 8px;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+
+
+#reminder-list {
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 3px rgba(255, 147, 177, 0.173);
+}
+
+.reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff1f5;
+    border: 1px solid #f4bdcd;
+
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+}
+
+.reminder-item button {
+    border: none;
+    background: #ffb1c5;
+    color: #8d4054;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#clear-data {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+
+    background: #e87898;
+    color: white;
+
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 0 3px rgba(255, 147, 177, 0.173);
+}
+
+#clear-data:hover {
+    background: #d55779;
+}
+
+
+
+footer {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+}
+
+footer .cat, .cat2 {
+  width: 100px; 
+  height: auto;
+}
+
+p {
+  margin: 0; 
+}
+
+
+/* footer .cat{
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+  transform: translateY(80px);
+}
+
+footer .cat2 {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    transform: translateY(-70px);
+    display: block;
+} */
+
+@media (max-width: 600px) {
+
+    .ht {
+        font-size: 32px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #habit-list {
+        grid-template-columns: 1fr;
+    }
+
+    #habit-form,
+    #edit-habit-form,
+    #category-form,
+    #reminder-form {
+        flex-direction: column;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+
+    .habit button {
+        width: auto;
+    }
+
+    .reminder-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
