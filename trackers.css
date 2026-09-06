@@ -447,3 +447,87 @@ footer .cat2 {
         align-items: flex-start;
     }
 }
+
+@media (max-width: 600px) {
+
+header {
+    padding: 10px 10px;
+    margin: -20;
+}
+
+.ht {
+    font-weight: bolder;
+    width: 100%;
+    font-size: 17px;
+    padding: 5px;
+    box-shadow: #c91554 0px 0px 8px;
+}
+
+h2{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.go-back{
+    font-size: 10px;
+    padding: 5px;
+}
+
+main {
+    width: 94%;
+    font-size: 14px;
+}
+
+section {
+    padding: 10px;
+}
+
+#habit-list {
+    margin: 5px auto;
+    grid-template-columns: 1fr;
+}
+
+#filter-category {
+    width: 90%;
+    font-size: 12px;
+    padding: 8px;
+    margin: 10px auto;
+}
+
+#habit-form,
+#edit-habit-form,
+#category-form,
+#reminder-form {
+    flex-direction: column;
+}
+
+input,
+select {
+    width: 100%;
+}
+
+#habit-form button,
+#edit-habit-form button,
+#category-form button,
+#reminder-form button {
+    width: 100%;
+}
+
+.habit button {
+    width: auto;
+}
+
+.reminder-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+footer {
+    flex-direction: column;
+    gap: 10px;
+}
+}
