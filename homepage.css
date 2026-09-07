@@ -180,7 +180,7 @@ h2 {
 /*────୨buttonsৎ────*/
 button {
   border: none;
-  text-decoration: none;
+  text-decoration-color: #ff65aa;
   padding: 12.5px 30px;
   display: flex;
   position: absolute;
@@ -219,7 +219,7 @@ button:active {
 
 
 
-/* ═══════════════════════════════════════
+
 @media screen and (max-width: 600px) {
 
   body {
@@ -244,7 +244,7 @@ button:active {
 
   .hp {
     width: 80%;
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -254,8 +254,8 @@ button:active {
   .ht {
     width: 80%;
     max-width: 350px;
-    padding: 12px 15px;
-    font-size: 13px;
+    padding: 10px 5px;
+    font-size: 17px;
     border: 3px solid rgb(201, 50, 100);
     border-radius: 30px;
     text-align: center;
@@ -375,9 +375,4 @@ button:active {
   }
 
 
-  /* ═══ ୨୧ REMOVE HOVER MOVEMENT ON MOBILE ୨୧ ═══ */
-
-  .ht:hover,
-  #habit-overview:hover,
-  #analytics:hover {
-    transform: none
+ }
