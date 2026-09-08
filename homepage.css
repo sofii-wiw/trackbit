@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 *{margin: 0;
@@ -35,6 +34,7 @@ body{
 /* ────୨header and pngsৎ──── */
 
 .ht {
+  position: relative;
     color: rgb(175, 0, 67);
     padding: 10px;
     border: 4px solid rgb(201, 50, 100);
@@ -83,13 +83,13 @@ width: 40px;
   left: 60px;
   margin: 10 auto;
   font-size: 1px;
-   background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    max-width: 80%;
-    width: max-content;
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
-    padding: 12px;
+  background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 80%;
+  width: max-content;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+  padding: 12px;
 }
 
 /*────୨box box overviewৎ────*/
@@ -154,21 +154,21 @@ h2 {
 }
 
 .analytics-card {
-    display: flex;
+    display: flex;  
     overflow-x: scroll;
     scroll-snap-align: start;
-    gap: 50px;
+    gap: 20vh;
     background: #fff0f5;
     border-radius: 30px;
     font-size: 20px;
     box-shadow: 0 4px 10px #ffb3c6;
     color: #8b1e3f;
-    width: 90;
+    width: 95%;
     max-width: 100%;
     padding: 15px;
     border: 2px solid #ff9fbf;
     background-color: rgb(255, 221, 226);
-    margin: 20px auto;
+    margin: 20px;
     transition: 0.4s;
 }
 
@@ -190,6 +190,7 @@ h2 {
 }
 
 .analytics-card h3 {
+    text-align: center;
     max-width: 900px;
     color: #810833;
     margin-bottom: 10px;
@@ -197,16 +198,17 @@ h2 {
 }
 
 .analytics-card p {
+   width: 500px;
    margin: 10px 0;
    color: #8b1e3f;
 }
 
 .analytics-progress {
-   font-size: medium;
+    font-size: medium;
     width: 100%;
     height: 15px;
     background: #ffd6e0;
-    border-radius: 10px;
+    border-radius: 40px;
     overflow: hidden;
 }
 
@@ -265,13 +267,16 @@ button:active {
 
 
 @media screen and (max-width: 600px) {
-
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     overflow-x: hidden;
   }
 
@@ -287,30 +292,33 @@ button:active {
   }
 
   .hp {
-    width: 80%;
+    width: 100%;
     font-size: 20px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    place-items: center;
+    justify-content: center;
   }
 
   .ht {
-    width: 80%;
+    width: 70%;
     max-width: 350px;
     padding: 8px;
     font-size: 14px;
     border: 3px solid rgb(201, 50, 100);
     border-radius: 30px;
     text-align: center;
-    margin: 5px auto ;
+    margin-top: 50px ;
+  }
+
+
+  .wings{
+    width: 20px;
   }
 
   .img,
   .img2 {
-    display: flex;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 70px;
   }
 
   h2 {
@@ -324,10 +332,17 @@ button:active {
   }
 
 .back{
-  position: relative;
-  left: 10px;
-  font-size: 9px;
-  max-width: 300px;
+  position: absolute;
+  bottom: 847px;
+  left: 20px;
+  font-size: 1px;
+  background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 80%;
+  width: max-content;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+  padding: 12px;
 }
 
 
@@ -335,7 +350,7 @@ button:active {
     width: 95%;
     max-width: 400px;
     padding: 18px 15px;
-    margin: 15px auto;
+    margin: 30px auto;
     font-size: 16px;
     border-radius: 25px;
     text-align: center;
@@ -355,24 +370,47 @@ button:active {
     width: 95%;
     max-width: 400px;
     padding: 15px;
-    margin: 15px auto;
+    margin: 30px;
     font-size: 16px;
     border-radius: 25px;
     text-align: center;
   }
 
   .analytics-card {
-    width: 100%;
+    display: flex;  
+    overflow-x: scroll;
+    scroll-snap-align: start;
+    gap: 20vh;
+    background: #fff0f5;
+    border-radius: 30px;
+    font-size: 20px;
+    box-shadow: 0 4px 10px #ffb3c6;
+    color: #8b1e3f;
+    width: 90%;
+    max-width: 100%;
     padding: 15px;
-    margin: 15px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    font-size: 16px;
-    text-align: center;
-  }
+    border: 2px solid #ff9fbf;
+    background-color: rgb(255, 221, 226);
+    margin: 20px;
+    transition: 0.4s;
+}
+
+.analytics-card::-webkit-scrollbar{
+  width: 10px;
+  height: 20px;
+}
+
+.analytics-card::-webkit-scrollbar-track{
+  background-color: #8b1e3f;
+  border-radius: 10px;
+
+}
+
+.analytics-card::-webkit-scrollbar-thumb{
+  background-image: url("https://poempuppy.neocities.org/resources/pixels/s1ebaq.gif");
+  background-repeat: repeat-x;
+  background-position: 10px;
+}
 
   .analytics-card h3 {
     width: 100%;
@@ -382,7 +420,7 @@ button:active {
   }
 
   .analytics-card p {
-    width: 100%;
+    width: 240px;
     font-size: 14px;
     padding: 8px;
     margin: 8px auto;
@@ -407,384 +445,4 @@ button:active {
 
 }
 
-=======
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-*{margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  text-transform: lowercase;
-}
-
-
-body{
-   background:linear-gradient(90deg, #ffa6be, #ffc7d1, #ffa6be);
-   display: grid;
-   align-items: center;
-   justify-content: center;
-}
-
-#main{
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* ────୨header and pngsৎ──── */
-
-.ht{
-    color: rgb(175, 0, 67);
-    padding: 10px;
-    border: 4px solid rgb(201, 50, 100);
-    background-color: lightpink;
-    max-width: 800px;
-    max-height: 200px;
-    border-radius: 40px;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 2px 5px 10px rgba(255, 138, 206, 0.973);
-}
-
-.hp{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-
-.img{
-  position: absolute;
-  left: 0;
-  height: 200px;
-}
-
-.img2{
-   position: absolute;
-   right: 0;
-   height: 200px;
-}
-
-.ht:hover{
-  transform: translate3d(9px);
-  box-shadow: 2px 9px 18px rgba(145, 0, 0, 0.486);
-}
-
-/*────୨box box overviewৎ────*/
-h2 {
-    color: rgb(175, 0, 67);
-  padding: 15px;
-  border: 2px solid rgb(255, 194, 214);
-  background-color: rgb(250, 178, 189);
-  border-radius: 25px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#habit-overview {
-  color: #8b1e3f;
-  width: 90%;
-  max-width: 900px;
-  padding: 30px;
-  border: 2px solid #ff9fbf;
-  background-color: rgb(255, 221, 226);
-  border-radius: 40px;
-  font-size: 20px;
-  margin: 25px auto;
-  transition: 0.3s;
-}
-
-
-#overview-content, p {
-    font-size: 20px;
-    padding: 15px;
-    background-color: rgb(255, 242, 244);
-    border-radius: 20px;
-    margin: 0;
-}
-
-#overview-content span {
-    color: #f3317b;
-    font-weight: bold;
-
-}
-
-#habit-overview:hover{
-  transform: translateY(9px);
-  box-shadow: 2px 9px 18px rgba(145, 0, 0, 0.486);
-}
-
-/*────୨box box analyticsxৎ────*/
-
-#analytics{
-   width: 90%;
-    max-width: 900px;
-    padding: 15px;
-    border: 2px solid #ff9fbf;
-    background-color: rgb(255, 221, 226);
-    border-radius: 30px;
-    font-size: 20px;
-    margin: 10px auto;
-    transition: 0.3s;
-}
-
-.analytics-card {
-    flex: 1 100 25px;
-    display: flex;
-    flex-direction: row;
-    background: #fff0f5;
-    border-radius: 30px;
-    font-size: 20px;
-    box-shadow: 0 4px 10px #ffb3c6;
-    color: #8b1e3f;
-    width: 90%;
-    max-width: 900px;
-    padding: 15px;
-    border: 2px solid #ff9fbf;
-    background-color: rgb(255, 221, 226);
-    margin: 20px auto;
-    transition: 0.s;
-    scroll-behavior: smooth;
-}
-
-.analytics-card h3 {
-    max-width: 900px;
-    color: #810833;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.analytics-card p {
-   font-size: medium;
-   margin: 10px 0;
-   color: #8b1e3f;
-}
-
-.analytics-progress {
-   font-size: medium;
-    width: 100%;
-    height: 15px;
-    background: #ffd6e0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.analytics-progress-bar {
-    font-size: medium;
-    height: 100%;
-    background: linear-gradient(90deg, #ff4d6d, #ff8fab);
-    border-radius: 10px;
-    transition: width 0.5s ease;
-}
-
-#analytics:hover {
-    transform: translateY(9px);
-    box-shadow: 2px 9px 18px rgba(145, 0, 0, 0.48);
-}
-
-/*────୨buttonsৎ────*/
-button {
-  border: none;
-  text-decoration-color: #ff65aa;
-  padding: 12.5px 30px;
-  display: flex;
-  position: absolute;
-  left: 890px;
-  border-radius: 100px;
-  background-color: #ff65aa;
-  color: #ffffff;
-  font-size: x-large;
-  font-weight: Bold;
-  -webkit-transition: all 0.5s;
-}
-
-button:hover {
-  background-color: #ff6fc8;
-  box-shadow: 0 0 20px #6fc5ff50;
-  transform: scale(1.1);
-}
-
-button:active {
-  background-color: rgb(198, 0, 86);
-  transition: all 0.25s;
-  -webkit-transition: all 0.25s;
-  box-shadow: none;
-  transform: scale(0.98);
-}
-
-
-/*────୨extrasৎ────*/
-.brd{
-   border: 2px, darkred;
-   text-align: center;
-   font-size: large;
-   color: rgb(180, 36, 36);
-}
-
-
-
-
-
-@media screen and (max-width: 600px) {
-
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  #main {
-    width: 100%;
-    min-height: 100vh;
-    padding: 15px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-  }
-
-  .hp {
-    width: 80%;
-    font-size: 15px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    place-items: center;
-  }
-
-  .ht {
-    width: 80%;
-    max-width: 350px;
-    padding: 10px 5px;
-    font-size: 17px;
-    border: 3px solid rgb(201, 50, 100);
-    border-radius: 30px;
-    text-align: center;
-    margin: 10px auto ;
-  }
-
-  .img,
-  .img2 {
-    display: flex;
-    width: 80px;
-    height: 80px;
-  }
-
-  h2 {
-    width: 90%;
-    max-width: 350px;
-    padding: 10px;
-    font-size: 21px;
-    border-radius: 20px;
-    text-align: center;
-    margin: 15px auto;
-  }
-
-  #habit-overview {
-    width: 95%;
-    max-width: 400px;
-    padding: 18px 15px;
-    margin: 15px auto;
-    font-size: 16px;
-    border-radius: 25px;
-    text-align: center;
-  }
-
-  #overview-content,
-  #overview-content p {
-    width: 100%;
-    font-size: 15px;
-    padding: 12px;
-    margin: 0 auto;
-    border-radius: 15px;
-    text-align: left;
-  }
-
-  #analytics {
-    width: 95%;
-    max-width: 400px;
-    padding: 15px;
-    margin: 15px auto;
-    font-size: 16px;
-    border-radius: 25px;
-    text-align: center;
-  }
-
-  .analytics-card {
-    width: 100%;
-    padding: 15px;
-    margin: 15px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .analytics-card h3 {
-    width: 100%;
-    font-size: 17px;
-    margin-bottom: 8px;
-    text-align: center;
-  }
-
-  .analytics-card p {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
-    margin: 8px auto;
-    text-align: center;
-  }
-
-  .analytics-progress {
-    width: 100%;
-    height: 12px;
-    margin: 8px auto;
-  }
-
-  .analytics-progress-bar {
-    height: 100%;
-  }
-
-  button {
-    position: static;
-    left: auto;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    padding: 10px 25px;
-    font-size: 18px;
-    border-radius: 100px;
-  }
-
-}
-
-  /* ═══ ୨୧ EXTRA ୨୧ ═══ */
-
-  .brd {
-    width: 90%;
-    max-width: 350px;
-    padding: 10px;
-    margin: 15px auto;
-    border: 2px solid darkred;
-    font-size: 14px;
-    text-align: center;
-  }
-
-
- }
->>>>>>> ff5ac6ef35641aafb4d1023c5dadf3a46ddd4729
