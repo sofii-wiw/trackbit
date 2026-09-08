@@ -9,13 +9,14 @@
 
 
 body{
-   margin: 10px;
-   height: 100vh;
+   margin: 20px;
+   max-height: 140vh;
    cursor: url('https://poempuppy.neocities.org/resources/pixels/6cv7vy.gif'), auto;
    background-image: url(https://i.pinimg.com/originals/d5/92/83/d5928332b517070db3ebcb92149cf40b.png);
    background-repeat: no-repeat;
    background-size: cover;
-   display: grid;
+   display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
 }
@@ -51,6 +52,7 @@ body{
 
 
 .hp{
+  margin: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -79,7 +81,7 @@ width: 40px;
 
 .back{
   position: absolute;
-  bottom: 720px;
+  bottom: 680px;
   left: 60px;
   margin: 10 auto;
   font-size: 1px;
@@ -292,11 +294,13 @@ button:active {
   }
 
   .hp {
+    position: relative;
     width: 100%;
     font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
   }
 
   .ht {
@@ -318,7 +322,7 @@ button:active {
   .img,
   .img2 {
     width: 60px;
-    height: 70px;
+    height: 60px;
   }
 
   h2 {
