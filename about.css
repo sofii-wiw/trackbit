@@ -9,6 +9,7 @@
 
 
 html{
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/6cv7vy.gif'), auto;
   position: relative;
   background-image: url(https://i.pinimg.com/originals/d5/92/83/d5928332b517070db3ebcb92149cf40b.png);
   background-repeat: no-repeat;
@@ -40,14 +41,15 @@ h1{
 }
 
 a{
-   font-size: 25px;
+    font-size: 5px;
     color: #ffcde0;
     font-weight: bold;
     text-decoration: none;
-    background-color: #ff1f75d4;
-    border: 5px, #ff7fa8;
-    max-width: 300px;
-    cursor: pointer;
+    background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 400px;
+    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
     border-radius: 30px;
     text-align: center;
     padding: 15px;
@@ -117,7 +119,7 @@ h2{
     background: #3e102b;
     border-left: 4px solid #c81867;
     transition: 0.2s ease;
-    cursor: pointer;
+    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
 }
 
 .features::before{
@@ -139,7 +141,7 @@ h2{
     background: #3e102b;
     border-left: 4px solid #c81867;
     transition: 0.2s ease;
-    cursor: pointer;
+    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
 }
 
 .how::before{
@@ -179,7 +181,7 @@ h2{
     background: #29121d;
     border: 3px double #d8799d;
     box-shadow: 0 0 12px rgba(216, 121, 165, 0.4);
-    cursor: pointer;
+    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
 }
 
 .about li:hover{
@@ -230,7 +232,7 @@ footer {
     border-radius: 5cqi;
     font-size: 24px;
     text-shadow: 0 0 6px #9d4473;
-    cursor: pointer;
+    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
     
 }
 
@@ -244,6 +246,7 @@ footer:hover{
 }
 
 
+/* 📱 mobile styles */
 @media (max-width: 768px) {
 
   * {

@@ -102,6 +102,7 @@ function addHabit(
         lastCompleted: null,
         lastUpdated: new Date().toISOString().split('T')[0],
     };
+
     habits.push(habit);
     saveData();
     renderHabits();
@@ -842,6 +843,34 @@ function scheduleNotification(reminder) {
         }
 
     }, delay);
+}
+
+var timeoutIds = [];
+function scheduleReminder(){
+    var title = document.getElementById("habitId").value;
+    var title = document.getElementById("time").value;
+    var title = document.getElementById("frequency").value;
+
+    var TimeString = "" + time;
+    var scheduledTime = new Date (TimeString);
+    var currentTime = new Date();
+    var timeDifference = scheduledTime - currentTime;
+
+    if (timeDifference > 0){
+        addReminder (habitId, time, frequency);
+
+        var timeoutId = setTimeout (function () {
+            document.getElementById('reminderHabit');
+
+            var notification = new notification (title, {
+                body: habitId, 
+                requireInteraction: true,
+        });
+    }, timeDifference);
+    timeoutIds.push(timeoutId);
+} else {
+    alert(" the scheduled time is in the past");
+}
 }
 
 

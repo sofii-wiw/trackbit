@@ -7,6 +7,7 @@
 }
 
 html,body {
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/6cv7vy.gif'), auto;
   display: grid;
   height: 100%;
   width: 100%;
@@ -64,7 +65,7 @@ html,body {
   text-decoration: none;
   padding: 10px;
   transition: all 0.4s;
-  cursor: pointer;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   border-radius: 50px;
   background: -webkit-linear-gradient(bottom,  #CB316E, #E9679A, #CB316E);
 }
@@ -90,7 +91,7 @@ a:link, a:visited {
   border-color: #85063aa9;
   max-width: 300px;
   padding: 10px;
-  cursor: pointer;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   transition: all 0.4s;
   border-radius: 50px;
   box-shadow: 0px 15px 20px rgba(99, 28, 28, 0.1);
@@ -113,7 +114,7 @@ a:link, a:visited {
   max-width: 400px;
   background: -webkit-linear-gradient(bottom,  #CB316E, #E9679A, #CB316E);
   padding: 10px;
-  cursor: pointer;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   border-radius: 50px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
