@@ -568,7 +568,7 @@ function updateFilterOptions() {
 }
 
 
-function handleReminderSubmit(event) {
+async function handleReminderSubmit(event) {
 
     event.preventDefault();
 
@@ -594,6 +594,21 @@ function handleReminderSubmit(event) {
     }
 
 
+    // Ask for notification permission
+    const permission =
+        await requestNotificationPermission();
+
+
+    if (permission !== "granted") {
+
+        alert(
+            "Please allow notifications to use reminders."
+        );
+
+        return;
+    }
+
+
     addReminder(
         habitId,
         time,
@@ -602,6 +617,7 @@ function handleReminderSubmit(event) {
 
     reminderForm.reset();
 }
+
 
 
 function addReminder(
@@ -748,15 +764,40 @@ function removeReminder(id) {
 }
 
 
-function requestNotificationPermission() {
+async function requestNotificationPermission() {
+
+    if (!("Notification" in window)) {
+
+        alert(
+            "This browser does not support notifications."
+        );
+
+        return "denied";
+    }
+
 
     if (
-        "Notification" in window &&
-        Notification.permission === "default"
+        Notification.permission ===
+        "granted"
     ) {
 
-        Notification.requestPermission();
+        return "granted";
     }
+
+
+    if (
+        Notification.permission ===
+        "default"
+    ) {
+
+        const permission =
+            await Notification.requestPermission();
+
+        return permission;
+    }
+
+
+    return Notification.permission;
 }
 
 
@@ -845,35 +886,6 @@ function scheduleNotification(reminder) {
     }, delay);
 }
 
-var timeoutIds = [];
-function scheduleReminder(){
-    var title = document.getElementById("habitId").value;
-    var title = document.getElementById("time").value;
-    var title = document.getElementById("frequency").value;
-
-    var TimeString = "" + time;
-    var scheduledTime = new Date (TimeString);
-    var currentTime = new Date();
-    var timeDifference = scheduledTime - currentTime;
-
-    if (timeDifference > 0){
-        addReminder (habitId, time, frequency);
-
-        var timeoutId = setTimeout (function () {
-            document.getElementById('reminderHabit');
-
-            var notification = new notification (title, {
-                body: habitId, 
-                requireInteraction: true,
-        });
-    }, timeDifference);
-    timeoutIds.push(timeoutId);
-} else {
-    alert(" the scheduled time is in the past");
-}
-}
-
-
 function showNotification(reminder) {
 
     const habit =
@@ -891,18 +903,27 @@ function showNotification(reminder) {
 
     if (
         "Notification" in window &&
-        Notification.permission ===
-            "granted"
+        Notification.permission === "granted"
     ) {
 
-        new Notification(
-            "🔥 Habit Reminder",
-            {
-                body:
-                    `Time to work on: ${habit.name}`
-            }
-        );
+        const notification =
+            new Notification(
+                "🔥 Habit Reminder",
+                {
+                    body:
+                        `Time to work on: ${habit.name}`
+                }
+            );
+
+
+        notification.onclick = function() {
+
+            window.focus();
+
+        };
+
     }
+
 }
 
 
@@ -1137,4 +1158,3 @@ function clearAllData() {
         "All habit data has been cleared."
     );
 }
-
