@@ -11,6 +11,7 @@ html, body {
   width: 100%;
   place-items: center;
   background:linear-gradient(90deg, #ff93b0, #ffc7d1, #ff91ae);
+}
 
 .title {
   color: #ffe8f4;
@@ -27,15 +28,15 @@ html, body {
   background-size: cover;
   border: double,   #ffc3e17c;
   overflow: hidden;
-  max-width: 600px;
-  height: 520px;
+  max-width: 400px;
+  height: 500px;
   padding: 30px;
   border-radius: 40px;
   box-shadow: 0px 0px 50px #bd005e8e;
 }
 .wrapper .title-text {
   display: flex;
-  width: 200%;
+  width: 210%;
 }
 .wrapper .title {
   width: 50%;
@@ -48,7 +49,7 @@ html, body {
   position: relative;
   display: flex;
   place-content: center;
-  gap: 200px;
+  gap: 100px;
   height: 70px;
   width: 100%;
   overflow: hidden;
@@ -203,4 +204,5 @@ form .btn input[type="submit"] {
   font-weight: 500;
   cursor: pointer;
 }
-}
+
+
