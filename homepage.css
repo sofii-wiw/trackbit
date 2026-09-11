@@ -9,9 +9,9 @@
 
 
 body{
-   margin: 20px;
-   max-height: 140vh;
-   cursor: url('https://poempuppy.neocities.org/resources/pixels/6cv7vy.gif'), auto;
+   margin-top: 20px;
+   max-height: 100%;
+   cursor: url('../assets/cursor1.gif'), auto;
    background-image: url(https://i.pinimg.com/originals/d5/92/83/d5928332b517070db3ebcb92149cf40b.png);
    background-repeat: no-repeat;
    background-size: cover;
@@ -50,12 +50,12 @@ body{
     box-shadow: 2px 5px 10px rgba(255, 138, 206, 0.973);
 }
 
-
-.hp{
-  margin: 20px;
+.hp {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  width: 100%;
 }
 
 .wings{
@@ -81,17 +81,15 @@ width: 40px;
 
 .back{
   position: absolute;
-  bottom: 680px;
-  left: 60px;
-  margin: 10 auto;
   font-size: 1px;
   background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
   background-repeat: no-repeat;
   background-size: contain;
-  max-width: 80%;
-  width: max-content;
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   padding: 12px;
+  width: 5px;
+  right: 94%;
+  bottom: 400px;
 }
 
 /*────୨box box overviewৎ────*/

@@ -10,7 +10,7 @@
 
 
 body {
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/6cv7vy.gif'), auto;
+    cursor: url('../assets/cursor1.gif'), auto;
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
@@ -34,7 +34,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 30px;
-   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
     border-radius: 20px;
     text-align: center;
     padding: 10px;
@@ -89,7 +89,7 @@ section {
 
 #filter-category {
     display: block;
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
     padding: 10px;
     margin: 10px;
     font-size: 17px;
@@ -186,7 +186,7 @@ section {
     font-family: inherit;
     font-size: 13px;
     font-weight: 600;
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
     transition: 0.2s ease;
 }
 
@@ -279,7 +279,7 @@ select:focus {
     font-family: inherit;
     font-weight: bold;
 
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
     transition: 0.2s ease;
     box-shadow: 0 0 0 3px rgba(233, 130, 161, 0.15);
 }
@@ -323,7 +323,7 @@ select:focus {
     color: #8e4055;
     border-radius: 8px;
     padding: 5px 9px;
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
 }
 
 
@@ -353,7 +353,7 @@ select:focus {
     color: #8d4054;
     padding: 7px 12px;
     border-radius: 8px;
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
 }
 
 #clear-data {
@@ -364,7 +364,7 @@ select:focus {
     background: #e87898;
     color: white;
 
-    cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+    cursor: url('../assets/cursor1.1.gif'), auto;
     font-weight: bold;
     box-shadow: 0 0 0 3px rgba(255, 147, 177, 0.173);
 }
