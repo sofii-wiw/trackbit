@@ -1,4 +1,3 @@
-
 const habitForm = document.getElementById("habit-form");
 const habitNameInput = document.getElementById("habit-name");
 const habitCategorySelect = document.getElementById("habit-category");
@@ -21,14 +20,9 @@ const reminderList = document.getElementById("reminder-list");
 const filterCategorySelect = document.getElementById("filter-category");
 const clearDataBtn = document.getElementById("clear-data");
 let habits = JSON.parse(localStorage.getItem("habits")) || [];
-let categories =
-    JSON.parse(localStorage.getItem("categories")) ||
-    ["health", "productivity", "learning"];
-let reminders =
-    JSON.parse(localStorage.getItem("reminders")) || [];
+let categories = JSON.parse(localStorage.getItem("categories")) || ["health", "productivity", "learning"];
+let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
 let habitToEdit = null;
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     renderHabits();
@@ -40,11 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOverview();
     updateAnalytics();
     requestNotificationPermission();
-    reminders.forEach(reminder => {
-        scheduleNotification(reminder);
-    });
+    reminders.forEach(reminder => {scheduleNotification(reminder);});
 });
-
 
 habitForm.addEventListener('submit', handleHabitSubmit);
 editHabitForm.addEventListener('submit', handleEditHabitSubmit);
@@ -60,35 +51,23 @@ filterCategorySelect.addEventListener("change", () =>
     {renderHabits
         (filterCategorySelect.value);}
 );
+
 clearDataBtn.addEventListener("click", clearAllData
 );
 
 function handleHabitSubmit(event) {
     event.preventDefault();
-    const name =
-        habitNameInput.value.trim();
-    const category =
-        habitCategorySelect.value;
-    const frequency =
-        habitFrequencySelect.value;
-    if (!name) {
-        alert("Please enter a habit name.");
+    const name = habitNameInput.value.trim();
+    const category = habitCategorySelect.value;
+    const frequency = habitFrequencySelect.value;
+    if (!name) { alert("Please enter a habit name.");
         return;
     }
-    addHabit(
-        name,
-        category,
-        frequency
-    );
+    addHabit(name, category, frequency);
     habitForm.reset();
 }
 
-
-function addHabit(
-    name,
-    category,
-    frequency
-) 
+function addHabit( name, category, frequency) 
 {
     const habit = {
         id: Date.now(),
@@ -113,28 +92,17 @@ function addHabit(
 
 
 function startEditHabit(id) {
-    const habit =
-        habits.find(
-            habit => habit.id === id
-        );
-    if (!habit) {
-        return;
-    }
+    const habit = habits.find( habit => habit.id === id);
+    if (!habit){
+         return;}
+
     habitToEdit = id;
-    editHabitNameInput.value =
-        habit.name;
-    editHabitCategorySelect.value =
-        habit.category;
-    editHabitFrequencySelect.value =
-        habit.frequency;
-    editHabitSection.style.display =
-        "block";
-    document.getElementById(
-        "add-habit"
-    ).style.display = "none";
-    editHabitSection.scrollIntoView({
-        behavior: "smooth"
-    });
+    editHabitNameInput.value = habit.name;
+    editHabitCategorySelect.value = habit.category;
+    editHabitFrequencySelect.value = habit.frequency;
+    editHabitSection.style.display = "block";
+    document.getElementById( "add-habit").style.display = "none";
+    editHabitSection.scrollIntoView({ behavior: "smooth"});
 }
 
 
@@ -345,136 +313,70 @@ function checkStreakMilestone(streak, habitName) {
 }
 
 function removeHabit(id) {
-
     const habit =
-        habits.find(
-            habit => habit.id === id
-        );
-
+        habits.find(habit => habit.id === id);
     if (!habit) {
         return;
     }
 
     const confirmed =
-        confirm(
-            `Delete "${habit.name}"?`
-        );
-
+        confirm(`Delete "${habit.name}"?`);
     if (!confirmed) {
         return;
     }
 
-    habits =
-        habits.filter(
-            habit => habit.id !== id
-        );
-
-
-    reminders =
-        reminders.filter(
-            reminder =>
-                reminder.habitId !== id
-        );
-
+    habits = habits.filter(habit => habit.id !== id);
+    reminders =reminders.filter(reminder => reminder.habitId !== id);
 
     saveData();
-
     renderHabits();
-
     renderReminders();
-
     updateReminderOptions();
-
     updateOverview();
-
     updateAnalytics();
 }
 
 function handleCategorySubmit(event) {
-
-    event.preventDefault();
-
-    const category =
-        newCategoryInput.value.trim();
-
+    event.preventDefault(); const category = newCategoryInput.value.trim();
     if (!category) {
         return;
     }
 
-
-    const exists =
-        categories.some(
-            existing =>
-                existing.toLowerCase() ===
-                category.toLowerCase()
-        );
-
+    const exists = categories.some(existing => existing.toLowerCase() === category.toLowerCase());
     if (exists) {
-
-        alert(
-            "That category already exists."
-        );
-
+        alert("That category already exists.");
         return;
     }
 
 
     categories.push(category);
-
     newCategoryInput.value = "";
-
     saveData();
-
     renderCategories();
-
     updateCategoryOptions();
-
     updateFilterOptions();
 }
 
 
 function renderCategories() {
-
     categoryList.innerHTML = "";
-
     categories.forEach(category => {
+        const item = document.createElement("div");
+        item.classList.add("category-item");
+        item.textContent = category;
 
-        const item =
-            document.createElement("div");
-
-        item.classList.add(
-            "category-item"
-        );
-
-        item.textContent =
-            category;
-
-
-        const deleteButton =
-            document.createElement("button");
-
-        deleteButton.textContent =
-            "Delete";
-
-        deleteButton.addEventListener(
-            "click",
-            () => removeCategory(category)
-        );
-
-        item.appendChild(
-            deleteButton
-        );
-
-        categoryList.appendChild(
-            item
-        );
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click",() => removeCategory(category));
+        item.appendChild( deleteButton);
+        categoryList.appendChild(item);
     });
+
     updateAnalytics();
 }
 
 
 function removeCategory(name) {
-
     const categoryUsed =
         habits.some(
             habit =>
@@ -482,20 +384,10 @@ function removeCategory(name) {
         );
 
     if (categoryUsed) {
-
-        alert(
-            "You cannot delete a category that is being used by a habit."
-        );
-
+        alert("You cannot delete a category that is being used by a habit." );
         return;
     }
-
-
-    categories =
-        categories.filter(
-            category =>
-                category !== name
-        );
+    categories = categories.filter( category => category !== name);
 
     saveData();
     renderCategories();
@@ -506,23 +398,16 @@ function removeCategory(name) {
 
 
 function updateCategoryOptions() {
-
     habitCategorySelect.innerHTML = "";
-
     editHabitCategorySelect.innerHTML = "";
 
-
     categories.forEach(category => {
-
         const option1 =
             document.createElement("option");
-
         option1.value =
             category;
-
         option1.textContent =
             category;
-
         habitCategorySelect.appendChild(
             option1
         );
@@ -530,13 +415,10 @@ function updateCategoryOptions() {
 
         const option2 =
             document.createElement("option");
-
         option2.value =
             category;
-
         option2.textContent =
             category;
-
         editHabitCategorySelect.appendChild(
             option2
         );
@@ -545,22 +427,16 @@ function updateCategoryOptions() {
 
 
 function updateFilterOptions() {
-
     filterCategorySelect.innerHTML =
         `<option value="all">All categories</option>`;
 
-
     categories.forEach(category => {
-
         const option =
             document.createElement("option");
-
         option.value =
             category;
-
         option.textContent =
             category;
-
         filterCategorySelect.appendChild(
             option
         );
@@ -569,45 +445,25 @@ function updateFilterOptions() {
 
 
 async function handleReminderSubmit(event) {
-
     event.preventDefault();
-
-    const habitId =
-        Number(
-            reminderHabitSelect.value
-        );
-
-    const time =
-        reminderTimeInput.value;
-
-    const frequency =
-        reminderFrequencySelect.value;
-
+    const habitId = Number( reminderHabitSelect.value);
+    const time = reminderTimeInput.value;
+    const frequency = reminderFrequencySelect.value;
 
     if (!habitId || !time) {
-
-        alert(
-            "Please select a habit and time."
-        );
-
+        alert("Please select a habit and time.");
         return;
     }
 
 
     // Ask for notification permission
-    const permission =
-        await requestNotificationPermission();
-
+    const permission = await requestNotificationPermission();
 
     if (permission !== "granted") {
 
-        alert(
-            "Please allow notifications to use reminders."
-        );
-
+        alert("Please allow notifications to use reminders.");
         return;
     }
-
 
     addReminder(
         habitId,
@@ -625,72 +481,45 @@ function addReminder(
     time,
     frequency
 ) {
-
     const reminder = {
-
         id: Date.now(),
-
         habitId: habitId,
-
         time: time,
-
         frequency: frequency
     };
-
 
     reminders.push(
         reminder
     );
 
     saveData();
-
     renderReminders();
-
-    scheduleNotification(
-        reminder
-    );
-
-    alert(
-        "Reminder created successfully!"
-    );
+    scheduleNotification( reminder);
+    alert("Reminder created successfully!");
 }
 
 
 function renderReminders() {
-
     reminderList.innerHTML = "";
-
     reminders.forEach(reminder => {
-
-        const habit =
-            habits.find(
-                h =>
-                    h.id ===
-                    reminder.habitId
-            );
+        const habit =habits.find(h => h.id === reminder.habitId );
 
         if (!habit) {
             return;
         }
 
-
         const item =
             document.createElement("div");
-
         item.classList.add(
             "reminder-item"
         );
-
         item.textContent =
             `Reminder: ${habit.name} at ${reminder.time} (${reminder.frequency}) `;
 
-
         const deleteButton =
             document.createElement("button");
-
         deleteButton.textContent =
             "Delete";
-
         deleteButton.addEventListener(
             "click",
             () => removeReminder(
@@ -699,130 +528,69 @@ function renderReminders() {
         );
 
 
-        item.appendChild(
-            deleteButton
-        );
-
-        reminderList.appendChild(
-            item
-        );
+        item.appendChild(deleteButton);
+        reminderList.appendChild(item);
     });
 }
 
 
 function updateReminderOptions() {
-
     reminderHabitSelect.innerHTML = "";
-
     if (habits.length === 0) {
-
-        const option =
-            document.createElement("option");
-
-        option.textContent =
-            "No habits available";
-
+        const option = document.createElement("option");
+        option.textContent = "No habits available";
         option.disabled = true;
-
-        reminderHabitSelect.appendChild(
-            option
-        );
-
+        reminderHabitSelect.appendChild(option);
         return;
     }
 
 
     habits.forEach(habit => {
-
-        const option =
-            document.createElement("option");
-
-        option.value =
-            habit.id;
-
-        option.textContent =
-            habit.name;
-
-        reminderHabitSelect.appendChild(
-            option
-        );
+        const option = document.createElement("option");
+        option.value = habit.id;
+        option.textContent = habit.name;
+        reminderHabitSelect.appendChild(option);
     });
 }
 
 
 function removeReminder(id) {
-
-    reminders =
-        reminders.filter(
-            reminder =>
-                reminder.id !== id
-        );
+    reminders = reminders.filter(reminder => reminder.id !== id);
 
     saveData();
-
     renderReminders();
 }
 
 
 async function requestNotificationPermission() {
-
     if (!("Notification" in window)) {
-
-        alert(
-            "This browser does not support notifications."
-        );
-
+        alert("This browser does not support notifications.");
         return "denied";
     }
 
-
-    if (
-        Notification.permission ===
-        "granted"
-    ) {
-
+    if (Notification.permission === "granted") {
         return "granted";
     }
 
-
-    if (
-        Notification.permission ===
-        "default"
-    ) {
-
-        const permission =
+    if (Notification.permission === "default") 
+        {const permission =
             await Notification.requestPermission();
-
-        return permission;
-    }
-
-
+        return permission;}
     return Notification.permission;
 }
 
 
 function scheduleNotification(reminder) {
-
-    if (
-        !("Notification" in window) ||
-        Notification.permission !== "granted"
-    ) {
+    if (!("Notification" in window) || Notification.permission !== "granted") {
         return;
     }
 
-
     const [hours, minutes] =
         reminder.time.split(":");
-
-
     const now =
         new Date();
-
-
     let reminderTime =
         new Date();
-
-
     reminderTime.setHours(
         Number(hours),
         Number(minutes),
@@ -884,46 +652,6 @@ function scheduleNotification(reminder) {
         }
 
     }, delay);
-}
-
-function showNotification(reminder) {
-
-    const habit =
-        habits.find(
-            h =>
-                h.id ===
-                reminder.habitId
-        );
-
-
-    if (!habit) {
-        return;
-    }
-
-
-    if (
-        "Notification" in window &&
-        Notification.permission === "granted"
-    ) {
-
-        const notification =
-            new Notification(
-                "🔥 Habit Reminder",
-                {
-                    body:
-                        `Time to work on: ${habit.name}`
-                }
-            );
-
-
-        notification.onclick = function() {
-
-            window.focus();
-
-        };
-
-    }
-
 }
 
 
@@ -1032,12 +760,10 @@ function updateAnalytics() {
         ).length;
 }
 
-
 function getToday() {
 
     const date =
         new Date();
-
 
     const year =
         date.getFullYear();
@@ -1063,7 +789,6 @@ function daysBetween(
     date1,
     date2
 ) {
-
     const first =
         new Date(
             date1 + "T00:00:00"
@@ -1111,19 +836,13 @@ function saveData() {
 function clearAllData() {
 
     const confirmed =
-        confirm(
-            "Are you sure you want to delete ALL habits, categories and reminders?"
-        );
-
+        confirm("Are you sure you want to delete ALL habits, categories and reminders?");
 
     if (!confirmed) {
         return;
     }
 
-
     habits = [];
-
-
     categories = [
         "health",
         "productivity",
@@ -1133,28 +852,14 @@ function clearAllData() {
 
     reminders = [];
 
-
     saveData();
-
-
     renderHabits();
-
     renderCategories();
-
     renderReminders();
-
     updateCategoryOptions();
-
     updateFilterOptions();
-
     updateReminderOptions();
-
     updateOverview();
-
     updateAnalytics();
-
-
-    alert(
-        "All habit data has been cleared."
-    );
+    alert("All habit data has been cleared.");
 }
