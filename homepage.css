@@ -22,9 +22,9 @@ body{
 }
 
 #main{
-  height: 100%;
-  width: 90%;
-  padding: 20px;
+  height: 80%;
+  width: 70%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -88,8 +88,8 @@ width: 40px;
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   padding: 12px;
   width: 5px;
-  right: 94%;
-  bottom: 400px;
+  right: 93%;
+  bottom: 370px;
 }
 
 /*────୨box box overviewৎ────*/
@@ -276,13 +276,13 @@ button:active {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 120vh;
+    height: 100%;
     overflow-x: hidden;
   }
 
   #main {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
@@ -335,16 +335,13 @@ button:active {
 
 .back{
   position: absolute;
-  bottom: 847px;
+  bottom: 740px;
   left: 20px;
   font-size: 1px;
   background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
   background-repeat: no-repeat;
   background-size: contain;
-  max-width: 80%;
-  width: max-content;
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
-  padding: 12px;
 }
 
 
