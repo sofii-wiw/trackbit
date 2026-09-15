@@ -52,12 +52,13 @@ header {
 }
 
 #habit-list h2{
-    color: #e93f6f;
+    color: #ffdbe5;
+    text-shadow: 5px 0 10px#ff4583;
     margin: 5px;
     padding: 20px;
     border: #ff6b93, solid, .5vh;
     border-radius: 20px;
-    background:linear-gradient(90deg, #ffa6be, #ffc7d1, #ffa6be);
+    background-image: linear-gradient(180deg, #ffbbcd, #ff7ca4, #ffbbcd);
     max-width: 200vh;
     max-height: 100vh;
     font-size: xx-large;
@@ -95,7 +96,6 @@ section {
     border: 2px, #ff7f7f;
 }
 
-
 #habit-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -104,8 +104,6 @@ section {
     box-shadow: 0 0 3px(darkred);
     padding: 10px 0;
 }
-
-
 
 .habit {
     position: relative;
