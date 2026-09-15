@@ -239,7 +239,7 @@ button {
   color: #810833;
   font-size: x-large;
   font-weight: Bold;
-  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 button:hover {
