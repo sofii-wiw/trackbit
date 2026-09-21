@@ -69,20 +69,27 @@ header {
 }
 
 main {
-    width: 90%;
-    max-width: 1100px;
+    width: 95%;
+    max-width: 100%;
     margin: auto;
 }
 
-section {
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 25px 0;
-    box-shadow: 0 8px 25px rgba(180, 80, 110, 0.12);
+#adds{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
+section {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 25px;
+    margin: 15px; 
+    box-shadow: 0 8px 25px rgba(180, 80, 110, 0.12);
+    width: 45%;
+}
 
 #filter-category {
     display: block;
@@ -103,6 +110,7 @@ section {
     background: transparent;
     box-shadow: 0 0 3px(darkred);
     padding: 10px 0;
+    width: 100%;
 }
 
 .habit {
@@ -111,6 +119,7 @@ section {
     border: 2px solid #f6c1d0;
     border-radius: 22px;
     padding: 22px;
+    margin: 15px;
     min-height: 230px;
     box-shadow: 0 8px 20px rgba(205, 90, 120, 0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -223,6 +232,7 @@ section {
 #edit-habit,
 #category-management,
 #reminders,
+#notes,
 #settings{
     box-shadow: 10px 5px 10px  #a7395fe1;
 }
