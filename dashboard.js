@@ -7,7 +7,7 @@ homepageButton.addEventListener("click", function () {
 });
 
 aboutButton.addEventListener("click", function () {
-    window.location.href = "about.html";
+    window.location.href = "dashboard.html#about";
 });
 
 trackersButton.addEventListener("click", function () {

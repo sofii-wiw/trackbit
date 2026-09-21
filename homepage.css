@@ -82,15 +82,15 @@ width: 40px;
 }
 
 .back{
-  font-size: 1px;
+  font-size: 10px;
   background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
   background-repeat: no-repeat;
   background-size: contain;
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
-  padding: 12px;
-  width: 5px;
+  padding: 20px;
+  margin: 10px;
   place-self: start;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 /*────୨box box overviewৎ────*/

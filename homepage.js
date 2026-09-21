@@ -50,4 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <p>${percent}% completed</p>`;
         analytics.appendChild(card);});
+
+
+        backButton.addEventListener("click", function () {
+    window.location.href = "dashboard.html";
+});
 });
