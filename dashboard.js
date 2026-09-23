@@ -13,3 +13,16 @@ aboutButton.addEventListener("click", function () {
 trackersButton.addEventListener("click", function () {
     window.location.href = "trackers.html";
 });
+
+const themeSelect = document.getElementById('theme-select');
+const htmlElement = document.documentElement;
+
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+themeSelect.value = savedTheme;
+
+themeSelect.addEventListener('change', (event) => { const selectedTheme = event.target.value;
+  htmlElement.setAttribute('data-theme', selectedTheme);
+  localStorage.setItem('theme', selectedTheme);
+});
