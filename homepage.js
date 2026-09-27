@@ -56,3 +56,117 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "dashboard.html";
 });
 });
+
+// ---- Elements ----
+const noteForm = document.getElementById("note-form");
+const habitSelect = document.getElementById("habit-select");
+const noteInput = document.getElementById("note-input");
+const notesList = document.getElementById("notes-list");
+
+if (!noteForm || !habitSelect || !noteInput || !notesList) {
+    console.warn("Notes: one or more expected elements were not found on this page.");
+}
+
+
+let habits = JSON.parse(localStorage.getItem("habits")) || [];
+let notes = JSON.parse(localStorage.getItem("habitNotes")) || [];
+
+function loadHabits() {
+    if (!habitSelect) return;
+    habitSelect.innerHTML = '<option value="">Select habit</option>';
+    habits.forEach((habit, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = habit.name;
+        habitSelect.appendChild(option);
+    });
+}
+
+
+const noteTemplate = document.getElementById("note-template");
+
+function renderNotes() {
+    if (!notesList || !noteTemplate) return;
+
+    notesList.querySelectorAll(".notes-card").forEach(card => card.remove());
+    notesList.querySelectorAll(".empty").forEach(el => el.remove());
+
+    if (notes.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "No notes yet.";
+        notesList.appendChild(empty);
+        return;
+    }
+
+    notes.forEach((note, index) => {
+        const clone = noteTemplate.content.cloneNode(true);
+        const card = clone.querySelector(".notes-card");
+        card.querySelector("h3").textContent = note.habit;
+        card.querySelector("p").textContent = note.text;
+        card.querySelector(".note-date").textContent = note.date;
+
+        const deleteBtn = card.querySelector(".delete-note");
+        deleteBtn.addEventListener("click", () => {
+            notes.splice(index, 1);
+            localStorage.setItem("habitNotes", JSON.stringify(notes));
+            renderNotes();
+        });
+
+        notesList.appendChild(clone);
+    });
+}
+
+// ---- Submit a new note ----
+if (noteForm) {
+    noteForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const habitIndex = habitSelect.value;
+        const noteText = noteInput.value.trim();
+
+        if (habitIndex === "") {
+            alert("Please select a habit ♡");
+            return;
+        }
+        if (noteText === "") {
+            alert("Please type a note ♡");
+            return;
+        }
+
+        const selectedHabit = habits[Number(habitIndex)];
+        if (!selectedHabit) {
+            alert("Habit not found.");
+            return;
+        }
+
+        const newNote = {
+            habit: selectedHabit.name,
+            text: noteText,
+            date: new Date().toLocaleString()
+        };
+
+        notes.push(newNote);
+        localStorage.setItem("habitNotes", JSON.stringify(notes));
+
+        noteForm.reset();
+        renderNotes();
+    });
+}
+
+// ---- Init ----
+loadHabits();
+renderNotes();
+
+
+const themeSelect = document.getElementById('theme-select');
+const htmlElement = document.documentElement;
+
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+themeSelect.value = savedTheme;
+
+themeSelect.addEventListener('change', (event) => { const selectedTheme = event.target.value;
+  htmlElement.setAttribute('data-theme', selectedTheme);
+  localStorage.setItem('theme', selectedTheme);})

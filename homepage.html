@@ -32,21 +32,40 @@
                 <p><span id="percent"></span>% completed</p>
                </div>
             </div>
+         </section>
+         <section id="note">
+         <section id="add-note">
+            <h2>˚₊‧꒰ა ─add note─ ໒꒱‧₊˚</h2>
+            <form id="note-form">
+               <select id="habit-select">
+                  <option value="">Select habit</option>
+               </select>
+               <textarea id="note-input" placeholder="type note" rows="5" required> </textarea>
+               
+               <button type="submit">ᰔ.add note.ᰔ</button>
+            </form>
+         </section>
+         <section id="notes">
+            <h2>notes</h2>
+            <div id="notes-list">
+               <template id="note-template">
+                  <div class="notes-card">
+                     <h3></h3>
+                     <p></p>
+                     <span class="note-date"></span>
+                     <button class="delete-note">delete</button>
+                  </div>
+               </template>
+            </div>
+         </section>
       </section>
-      <section id="notes">
-         <h2>notes</h2>
-         <div class="notes-card">
-            <h3 id="habit"></h3>
-            <p id="note"> dcfahsgdhbfsfsfafesedrweretrhjghnmncgmn vghkfyhjnghkuydfb vmfjhtgvhttdfaegtrhgybyhbygbgygdhbfsfsfafesedrweretrhjghnmncgmn vghkfyhjnghkuydfb vmfjhtgvhttdfaegtrhgybyhbygbgygdhbfsfsfafesedrweretrhjghnmncgmn vghkfyhjnghkuydfb vmfjhtgvhttdfaegtrhgybyhbygbgygvygvbyvgyvytcvuvtyjuykhjvgyf</p>
-         </div>
-      </section>
-      </section>
-      <a href="trackers.html"><button class="btn">˚₊‧꒰ა trackers ໒꒱ ‧₊˚</button></a>
-      </div>
-    </div>
-     
-     <script src="homepage.js"></script>
-   </body>
+   </section>
+   <a href="trackers.html"><button class="btn">˚₊‧꒰ა trackers ໒꒱ ‧₊˚</button></a>
+   </div>
+</div>
+
+<script src="homepage.js"></script>
+</body>
 </html>
 
 

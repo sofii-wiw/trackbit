@@ -19,6 +19,7 @@ const reminderFrequencySelect = document.getElementById("reminder-frequency");
 const reminderList = document.getElementById("reminder-list");
 const filterCategorySelect = document.getElementById("filter-category");
 const clearDataBtn = document.getElementById("clear-data");
+
 let habits = JSON.parse(localStorage.getItem("habits")) || [];
 let categories = JSON.parse(localStorage.getItem("categories")) || ["health", "productivity", "learning"];
 let reminders = JSON.parse(localStorage.getItem("reminders")) || [];
@@ -863,3 +864,15 @@ function clearAllData() {
     updateAnalytics();
     alert("All habit data has been cleared.");
 }
+
+const themeSelect = document.getElementById('theme-select');
+const htmlElement = document.documentElement;
+
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+themeSelect.value = savedTheme;
+
+themeSelect.addEventListener('change', (event) => { const selectedTheme = event.target.value;
+  htmlElement.setAttribute('data-theme', selectedTheme);
+  localStorage.setItem('theme', selectedTheme);})

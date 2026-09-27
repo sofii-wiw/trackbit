@@ -8,7 +8,7 @@
   text-transform: lowercase;
 }
 
-
+:root, html[data-theme="pink"] {
 body {
     cursor: url('../assets/cursor1.gif'), auto;
     margin: 0;
@@ -232,7 +232,6 @@ section {
 #edit-habit,
 #category-management,
 #reminders,
-#notes,
 #settings{
     box-shadow: 10px 5px 10px  #a7395fe1;
 }
@@ -469,4 +468,364 @@ footer {
     flex-direction: row;
     gap: 10px;
 }
+}
+}
+
+
+/* ═══════════════════════════════════════════════
+   ═══════════════════════════════════════════════ */
+
+html[data-theme="black"],
+html[data-theme="black"] body {
+    background-color: #100b0f;
+    color: #e6d5dc;
+}
+
+html[data-theme="black"] body {
+    background-image: url("https://i.pinimg.com/736x/f6/42/d9/f642d980456db59db4e2f6fbadacb4b7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+html[data-theme="black"],
+html[data-theme="black"] body,
+html[data-theme="black"] section,
+html[data-theme="black"] .habit,
+html[data-theme="black"] .category-item,
+html[data-theme="black"] .reminder-item,
+html[data-theme="black"] input,
+html[data-theme="black"] select,
+html[data-theme="black"] button {
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+html[data-theme="black"] { 
+#habit-list,
+#add-habit,
+#edit-habit,
+#category-management,
+#reminders,
+#settings{
+    box-shadow: 0 7px  #696969e1;}}
+
+/* ─────────────── HEADER ─────────────── */
+html[data-theme="black"] .ht {
+    color: #e4e4e4;
+    background: linear-gradient(180deg, #505050, #292929);
+    border: 4px solid #666;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .55);
+    text-shadow: 2px 2px 4px #111;
+}
+html[data-theme="black"] .ht:hover {
+    background: linear-gradient(180deg, #6b6b6b, #333);
+    color: #fff;
+    box-shadow: 5px 8px 18px rgba(0, 0, 0, .7);
+    transform: translateY(-3px);
+}
+/* ─────────────── BACK BUTTON ─────────────── */
+html[data-theme="black"] .go-back {
+    color: #c7c3c5;
+    filter: grayscale(1) brightness(.75);
+    text-shadow: 2px 2px 3px #111;
+}
+
+html[data-theme="black"] .go-back:hover {
+    color: #eee;
+    filter: grayscale(.4) brightness(1);
+}
+
+/* ─────────────── HABIT LIST TITLE ─────────────── */
+
+html[data-theme="black"] #habit-list h2 {
+    color: #e8e8e8;
+    background: linear-gradient(180deg, #575757, #303030, #575757);
+    border: 2px solid #696969;
+    box-shadow: 5px 5px  #535353;
+    text-shadow: 3px 2px 5px #111;
+}
+
+/* ─────────────── SECTIONS ─────────────── */
+
+html[data-theme="black"] section {
+    background: rgba(29, 27, 28, .94);
+    border: 2px solid #4d4c4d;
+    color: #ded9dc;
+    box-shadow: 6px 6px 0 #191819;
+}
+
+/* ─────────────── FILTER ─────────────── */
+
+html[data-theme="black"] #filter-category {
+    color: #ddd;
+    background: linear-gradient(180deg, #575757, #303030);
+    border: 2px solid #646464;
+    border-radius: 20px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, .4);
+}
+
+html[data-theme="black"] #filter-category:focus {
+    border-color: #999;
+}
+
+/* ─────────────── HABIT CARDS ─────────────── */
+
+html[data-theme="black"] .habit {
+    background: linear-gradient(145deg, #3b393a, #242223);
+    border: 2px solid #5b595a;
+    color: #ddd8da;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .45);
+}
+
+html[data-theme="black"] .habit:hover {
+    background: linear-gradient(145deg, #454344, #292829);
+    border-color: #858285;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .65);
+    transform: translateY(-6px);
+}
+
+html[data-theme="black"] .habit h3 {
+    color: #e1dddf;
+    text-shadow: 2px 2px 3px #1a191a;
+}
+
+/* ─────────────── BADGES ─────────────── */
+
+html[data-theme="black"] .badge {
+    background: #555455;
+    color: #e8e8e8;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .35);
+}
+
+/* ─────────────── PROGRESS BAR ─────────────── */
+
+html[data-theme="black"] .progress {
+    background: #222122;
+}
+
+html[data-theme="black"] .progress-bar {
+    background: linear-gradient(90deg, #555, #aaa, #555);
+    box-shadow: 0 0 5px rgba(180, 180, 180, .25);
+}
+
+/* ─────────────── HABIT BUTTONS ─────────────── */
+
+html[data-theme="black"] .habit button {
+    color: #eee;
+    border: 1px solid #666;
+}
+
+/* Complete */
+
+html[data-theme="black"] .complete-btn {
+    background: linear-gradient(180deg, #666, #3b3b3b);
+    color: #eee;
+}
+
+html[data-theme="black"] .complete-btn:hover {
+    background: linear-gradient(180deg, #888, #555);
+    color: #fff;
+}
+
+/* Edit */
+
+html[data-theme="black"] .edit-btn {
+    background: #4b494a;
+    color: #ddd;
+}
+
+html[data-theme="black"] .edit-btn:hover {
+    background: #666;
+    color: #fff;
+}
+
+/* Remove */
+
+html[data-theme="black"] .remove-btn {
+    background: #3a3839;
+    color: #c9c5c7;
+}
+
+html[data-theme="black"] .remove-btn:hover {
+    background: #555;
+    color: #fff;
+}
+
+/* ─────────────── INPUTS / SELECTS ─────────────── */
+
+html[data-theme="black"] input,
+html[data-theme="black"] select {
+    color: #dedadd;
+    background: #252425;
+    border: 2px solid #646164;
+    border-radius: 10px;
+    outline: none;
+}
+
+html[data-theme="black"] input::placeholder {
+    color: #969194;
+}
+
+html[data-theme="black"] input:focus,
+html[data-theme="black"] select:focus {
+    border-color: #a6a3a5;
+    box-shadow: 0 0 0 3px rgba(160, 160, 160, .15);
+}
+
+html[data-theme="black"] option {
+    color: #ddd;
+    background: #1f1e1f;
+}
+
+/* ─────────────── FORM BUTTONS ─────────────── */
+
+html[data-theme="black"] #habit-form button,
+html[data-theme="black"] #edit-habit-form button,
+html[data-theme="black"] #category-form button,
+html[data-theme="black"] #reminder-form button {
+    background: linear-gradient(180deg, #575757, #303030, #575757);
+    border: 2px solid #616161;
+    color: #e0e0e0;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, .45);
+    text-shadow: 2px 2px 3px #222;
+}
+
+html[data-theme="black"] #habit-form button:hover,
+html[data-theme="black"] #edit-habit-form button:hover,
+html[data-theme="black"] #category-form button:hover,
+html[data-theme="black"] #reminder-form button:hover {
+    background: linear-gradient(180deg, #757575, #c7c7c7, #757575);
+    color: #333;
+    box-shadow: 4px 5px 12px rgba(0, 0, 0, .55);
+    transform: translateY(-3px);
+}
+
+/* ─────────────── CATEGORY ITEMS ─────────────── */
+
+html[data-theme="black"] .category-item {
+    background: #363536;
+    border: 1px solid #5b595a;
+    color: #ddd;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, .3);
+}
+
+html[data-theme="black"] .category-item button {
+    background: #555455;
+    color: #ddd;
+    border: 1px solid #666;
+}
+
+html[data-theme="black"] .category-item button:hover {
+    background: #777;
+    color: #fff;
+}
+
+/* ─────────────── REMINDERS ─────────────── */
+
+html[data-theme="black"] #reminder-list {
+    box-shadow: 0 0 0 3px rgba(120, 120, 120, .12);
+}
+
+html[data-theme="black"] .reminder-item {
+    background: #363536;
+    border: 1px solid #5b595a;
+    color: #ddd;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, .3);
+}
+
+html[data-theme="black"] .reminder-item button {
+    background: #555455;
+    color: #ddd;
+    border: 1px solid #666;
+}
+
+html[data-theme="black"] .reminder-item button:hover {
+    background: #777;
+    color: #fff;
+}
+
+/* ─────────────── SETTINGS ─────────────── */
+
+html[data-theme="black"] #settings {
+    background: #1d1b1c;
+    border: 2px solid #4d4c4d;
+    color: #ddd;
+    box-shadow: 5px 5px 0 #191819;
+}
+
+html[data-theme="black"] #clear-data {
+    background: linear-gradient(180deg, #575757, #303030);
+    border: 1px solid #666;
+    color: #eee;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, .4);
+}
+
+html[data-theme="black"] #clear-data:hover {
+    background: linear-gradient(180deg, #777, #444);
+    color: #fff;
+}
+
+/* ─────────────── FOOTER ─────────────── */
+
+html[data-theme="black"] footer {
+    color: #fdfdfd; 
+}
+
+html[data-theme="black"] footer .cat, .cat2{
+    content: url('https://poempuppy.neocities.org/resources/pixels/ysdmp7.gif');
+}
+
+/* ─────────────── MOBILE ─────────────── */
+
+@media (max-width: 600px) {
+
+    html[data-theme="black"] .ht {
+        background: linear-gradient(180deg, #505050, #292929);
+        border-color: #666;
+        color: #eee;
+        box-shadow: 0 0 8px #333;
+    }
+
+    html[data-theme="black"] #habit-list h2 {
+        background: linear-gradient(180deg, #505050, #292929);
+        color: #eee;
+    }
+
+    html[data-theme="black"] section {
+        background: rgba(29, 27, 28, .96);
+        border-color: #4d4c4d;
+        box-shadow: 4px 4px 0 #191819;
+    }
+
+    html[data-theme="black"] .habit {
+        background: linear-gradient(145deg, #3b393a, #242223);
+        border-color: #5b595a;
+    }
+
+    html[data-theme="black"] .category-item,
+    html[data-theme="black"] .reminder-item {
+        background: #363536;
+        border-color: #5b595a;
+    }
+
+    html[data-theme="black"] #settings {
+        background: #1d1b1c;
+        border-color: #4d4c4d;
+    }
+
+    html[data-theme="black"] input,
+    html[data-theme="black"] select {
+        background: #252425;
+        color: #dedadd;
+        border-color: #646164;
+    }
+
+    html[data-theme="black"] #habit-form button,
+    html[data-theme="black"] #edit-habit-form button,
+    html[data-theme="black"] #category-form button,
+    html[data-theme="black"] #reminder-form button {
+        background: linear-gradient(180deg, #575757, #303030, #575757);
+        color: #eee;
+    }
 }

@@ -7,7 +7,7 @@
   text-transform: lowercase;
 }
 
-
+:root, html[data-theme="pink"] {
 body{
    margin-top: 20px;
    max-height: 100%;
@@ -35,13 +35,12 @@ body{
 /* ────୨header and pngsৎ──── */
 
 .ht {
-  position: relative;
     color: rgb(175, 0, 67);
     padding: 10px;
     border: 4px solid rgb(201, 50, 100);
     background-color: lightpink;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: fit-content;
     max-height: 200px;
     border-radius: 40px;
     text-align: center;
@@ -184,7 +183,8 @@ h2 {
 }
 
 .analytics-card::-webkit-scrollbar-thumb{
-  background-image: url("https://poempuppy.neocities.org/resources/pixels/s1ebaq.gif");
+  background-image: url("https://i.pinimg.com/1200x/1b/47/56/1b4756854166eb5338b2bbc7445c9b46.jpg");
+  border-radius: 20px;
   background-repeat: repeat-x;
   background-position: 10px;
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
@@ -226,27 +226,90 @@ h2 {
 }
 
 /*────────────────────────୨box box notesৎ────────────────────────*/
-#notes{
+
+#note{
+  max-width: 200dvh;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  white-space: normal;
+  word-break: break-word;
+  overflow: visible;
+  max-height: none;
+}
+
+#note-input {
+  margin-top: 5px;
+  width: 100%; 
+  padding: 10px; 
+  resize: vertical; 
+  white-space: pre-wrap;
+  overflow-wrap: break-word; 
+  word-break: break-word; 
+  font-size: 16px; 
+}
+
+ #note-input, select{
+    padding: 12px 14px;
+    border: 2px solid #ec8eae;
+    border-radius: 20px;
+    background: white;
+    color: #633f4b;
+    outline-color: rgba(235, 77, 130, 0.849);
+}
+
+#note-form button, .delete-note {
+  font-size: 15px;
+  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
+  border: none;
+  margin: 20px;
+  text-decoration: underline #ffcee4;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 100px;
+  background-color: #ff94c4;
+  color: #810833;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+#note-form button:hover {
+  color: whitesmoke;
+  background-color: #cf4282;
+  box-shadow: 0 0 20px #ff6fc850;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+#notes, #add-note{
     max-width: 72%;
+    height: 100%;
     padding: 15px;
     border: 4px solid #ffbad1;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 20px;
     margin: 50px auto;
     transition: 0.3s;
 }
 
-#notes h2{
-  background-color: #da0c4ab4;
-  color: #ffc3d2;
+#notes h2, #add-note h2{
+  background-color: #f05181;
+  color: #ffeaef;
 }
 
+#notes-list h3{
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+#notes-list {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+}
   .notes-card {
-    display: flex; 
-    flex-direction: column;
-    gap: 5px;
     background: #fff0f5;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 20px;
     box-shadow: 0 4px 10px #ffc3d2;
     color: #8b1e3f;
@@ -257,7 +320,9 @@ h2 {
     background-color: rgb(255, 202, 222);
     margin: 3px;
     transition: 0.4s;
+    height: auto;
     overflow: visible;
+    
 }
 
 #note{
@@ -266,17 +331,31 @@ h2 {
    font-size: 20px;
   }
 
-#note::before{
-  content: url(https://poempuppy.neocities.org/resources/pixels/y59vn8.gif);
+.notes-card p{
+   margin: 6px;
+   padding: 15px;
+   color: #8b1e3f;
+   font-size: 20px;
+   
 }
 
+.notes-card p::before{
+  content: url('https://poempuppy.neocities.org/resources/pixels/g67ejq.gif');
+  padding-right: 8px;
+}
+
+.note-date{
+  padding-left: 15px;
+  font-size: 20px;
+  text-shadow: 2px 0 2px #df0e574b;
+}
 
 /*────୨buttonsৎ────*/
-button {
+.btn {
   cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
   border: none;
   margin: 20px;
-  text-decoration: underline #ffcee4;
+  text-decoration: none;
   padding: 12.5px 30px;
   position: relative;
   border-radius: 100px;
@@ -292,6 +371,7 @@ button:hover {
   background-color: #ff65aa;
   box-shadow: 0 0 20px #ff6fc850;
   transform: scale(1.1);
+  text-decoration: none;
 }
 
 button:active {
@@ -489,5 +569,318 @@ button:active {
   }
 
 }
+}
 
+
+/* ══════════════════════════════════════════════════════════════════════════════ */
+html[data-theme="black"],
+html[data-theme="black"] body {
+    background-color: #100b0f;
+    color: #e6d5dc;
+}
+
+html[data-theme="black"] body {
+    background-image: url("https://i.pinimg.com/736x/f6/42/d9/f642d980456db59db4e2f6fbadacb4b7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+html[data-theme="black"],
+html[data-theme="black"] body,
+html[data-theme="black"] #main,
+html[data-theme="black"] .ht,
+html[data-theme="black"] h2,
+html[data-theme="black"] #habit-overview,
+html[data-theme="black"] #analytics,
+html[data-theme="black"] .analytics-card,
+html[data-theme="black"] #notes,
+html[data-theme="black"] #add-note,
+html[data-theme="black"] .notes-card,
+html[data-theme="black"] button,
+html[data-theme="black"] select,
+html[data-theme="black"] textarea,
+html[data-theme="black"] input {
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* ───────────── HEADER ───────────── */
+
+html[data-theme="black"] .ht {
+    color: #e4e4e4;
+    background: linear-gradient(rgba(58,57,58,.75),rgba(29,28,29,.9));
+    border: 3px solid #666;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.55);
+    text-shadow: 2px 2px 4px #111;
+}
+
+html[data-theme="black"] .ht:hover {
+    background: linear-gradient(#626262,#303030);
+    color: #fff;
+    box-shadow: 5px 8px 18px rgba(0,0,0,.7);
+    transform: translateY(-2px);
+}
+
+/* ───────────── BACK BUTTON ───────────── */
+
+html[data-theme="black"] .back {
+    filter: grayscale(1) brightness(.75);
+    opacity: .9;
+}
+
+html[data-theme="black"] .back:hover {
+    filter: grayscale(.5) brightness(1);
+}
+
+/* ───────────── HEADINGS ───────────── */
+
+html[data-theme="black"] h2 {
+    color: #e4e4e4;
+    background: linear-gradient(180deg,#4d4c4d,#292829);
+    border: 2px solid #696969;
+    box-shadow: 5px 5px 0 #171617;
+    text-shadow: 2px 2px 4px #111;
+}
+
+/* ───────────── HABIT OVERVIEW ───────────── */
+
+html[data-theme="black"] #habit-overview {
+    color: #ded9dc;
+    background: rgba(37,36,37,.94);
+    border: 3px solid #4d4c4d;
+    box-shadow: 5px 5px 0 #191819;
+}
+
+html[data-theme="black"] #overview-content,
+html[data-theme="black"] #overview-content p {
+    color: #ded9dc;
+    background: #3a393a;
+    border: 1px solid #555455;
+}
+
+html[data-theme="black"] #overview-content span {
+    color: #ddd;
+    text-shadow: 2px 2px 4px #222;
+}
+
+html[data-theme="black"] #habit-overview:hover {
+    transform: translateY(4px);
+    box-shadow: 7px 8px 0 #171617;
+}
+
+/* ───────────── ANALYTICS ───────────── */
+
+html[data-theme="black"] #analytics {
+    background: #1d1b1c;
+    border: 3px solid #4d4c4c;
+    color: #ded9dc;
+    box-shadow: 5px 5px 0 #242424;
+}
+
+html[data-theme="black"] .analytics-card {
+    background: #3a393a;
+    border: 2px solid #5b595a;
+    color: #dfd0d6;
+    box-shadow: 4px 5px 10px rgba(0,0,0,.5);
+}
+
+html[data-theme="black"] .analytics-card h3 {
+    color: #e2dfe0;
+    text-shadow: 2px 2px 3px #222;
+}
+
+html[data-theme="black"] .analytics-card p {
+    color: #ddd8da;
+    background: #292829;
+}
+
+html[data-theme="black"] .analytics-progress {
+    background: #222122;
+}
+
+html[data-theme="black"] .analytics-progress-bar {
+    background: linear-gradient(90deg,#666,#b5b5b5,#666);
+}
+
+html[data-theme="black"] .analytics-card::-webkit-scrollbar-track {
+    background: #242324;
+}
+
+html[data-theme="black"] .analytics-card::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,#555,#999,#555);
+    border-radius: 20px;
+    border: 2px solid #292829;
+}
+
+/* ───────────── NOTES ───────────── */
+
+html[data-theme="black"] #notes,
+html[data-theme="black"] #add-note {
+    background: rgba(29,27,28,.95);
+    border: 3px solid #4d4c4c;
+    color: #dfd0d6;
+    box-shadow: 5px 5px 0 #242424;
+}
+
+html[data-theme="black"] #notes h2,
+html[data-theme="black"] #add-note h2 {
+    background: linear-gradient(180deg,#555455,#303030);
+    color: #eee;
+    border-color: #6b696a;
+}
+
+/* ───────────── NOTE CARDS ───────────── */
+
+html[data-theme="black"] .notes-card {
+    background: rgba(49,49,49,.95);
+    border: 2px solid #5e5c5d;
+    color: #dfd0d6;
+    box-shadow: 4px 5px 0 #1a191a;
+}
+
+html[data-theme="black"] .notes-card:hover {
+    background: #3d3c3d;
+    border-color: #858285;
+    box-shadow: 5px 6px 12px rgba(0,0,0,.6);
+    transform: translateY(-2px);
+}
+
+html[data-theme="black"] #note {
+    color: #e3dadd;
+}
+
+html[data-theme="black"] .notes-card p {
+    color: #dfd0d6;
+    background: #292829;
+    border: 1px solid #4e4d4e;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+html[data-theme="black"] .note-date {
+    color: #aaa6a8;
+    text-shadow: 2px 2px 3px #181718;
+}
+
+/* ───────────── NOTE INPUT ───────────── */
+
+html[data-theme="black"] #note-input,
+html[data-theme="black"] select {
+    color: #dedadd;
+    background: #252425;
+    border: 2px solid #646164;
+    border-radius: 20px;
+    outline: none;
+}
+
+html[data-theme="black"] #note-input::placeholder {
+    color: #969194;
+}
+
+html[data-theme="black"] #note-input:focus,
+html[data-theme="black"] select:focus {
+    border-color: #a6a3a5;
+    box-shadow: 0 0 10px rgba(150,150,150,.25);
+}
+
+html[data-theme="black"] option {
+    color: #ddd;
+    background: #1f1e1f;
+}
+
+/* ───────────── BUTTONS ───────────── */
+
+html[data-theme="black"] .btn,
+html[data-theme="black"] #note-form button,
+html[data-theme="black"] .delete-note {
+    background: linear-gradient(180deg,#575757,#303030,#575757);
+    border: 2px solid #616161;
+    color: #e0e0e0;
+    box-shadow: 3px 4px 10px rgba(0,0,0,.45);
+    text-shadow: 2px 2px 3px #222;
+}
+
+html[data-theme="black"] .btn:hover,
+html[data-theme="black"] #note-form button:hover,
+html[data-theme="black"] .delete-note:hover,
+html[data-theme="black"] button:hover {
+    background: linear-gradient(180deg,#757575,#c7c7c7,#757575);
+    color: #333;
+    box-shadow: 4px 5px 12px rgba(0,0,0,.55);
+    transform: translateY(-2px) scale(1.02);
+}
+
+html[data-theme="black"] button:active {
+    background: #292929;
+    color: #eee;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+/* ───────────── LINKS ───────────── */
+
+html[data-theme="black"] a {
+    color: #d8d3d5;
+}
+
+html[data-theme="black"] a:hover {
+    color: #fff;
+}
+
+/* ───────────── MOBILE ───────────── */
+
+@media screen and (max-width:600px) {
+
+    html[data-theme="black"] .ht {
+        background: linear-gradient(180deg,#505050,#292929);
+        border-color: #666;
+        color: #eee;
+    }
+
+    html[data-theme="black"] #habit-overview,
+    html[data-theme="black"] #analytics {
+        background: rgba(29,28,29,.95);
+        border-color: #4d4c4d;
+        box-shadow: 4px 4px 0 #191819;
+    }
+
+    html[data-theme="black"] .analytics-card {
+        background: #363536;
+        border-color: #555455;
+    }
+
+    html[data-theme="black"] #notes,
+    html[data-theme="black"] #add-note {
+        background: rgba(29,27,28,.96);
+        border-color: #4d4c4d;
+    }
+
+    html[data-theme="black"] .notes-card {
+        background: #363536;
+        border-color: #5b595a;
+    }
+
+    html[data-theme="black"] .notes-card p {
+        background: #292829;
+        color: #ddd8da;
+    }
+
+    html[data-theme="black"] #note-input,
+    html[data-theme="black"] select {
+        background: #252425;
+        color: #dedadd;
+        border-color: #646164;
+    }
+
+    html[data-theme="black"] .btn,
+    html[data-theme="black"] #note-form button,
+    html[data-theme="black"] .delete-note {
+        background: linear-gradient(180deg,#575757,#303030,#575757);
+        color: #eee;
+    }
+}
 
