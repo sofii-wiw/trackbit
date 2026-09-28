@@ -865,6 +865,54 @@ function clearAllData() {
     alert("All habit data has been cleared.");
 }
 
+const sidebarButtons = document.querySelectorAll("#sidebar button");
+
+const sidePanels = [
+    document.getElementById("add-habit"),
+    document.getElementById("edit-habit"),
+    document.getElementById("category-management"),
+    document.getElementById("reminders"),
+    document.getElementById("settings")
+];
+
+
+// Open sidebar panel
+sidebarButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const panelId = button.dataset.panel;
+        const panel = document.getElementById(panelId);
+
+        // Close other panels
+        sidePanels.forEach(section => {
+            section.classList.remove("side-open");
+        });
+
+        // Open selected panel
+        if (panel) {
+            panel.classList.add("side-open");
+        }
+    });
+});
+
+
+// Close panel when clicking outside
+document.addEventListener("click", (event) => {
+
+    const clickedInsidePanel = event.target.closest(
+        "#add-habit, #edit-habit, #category-management, #reminders, #settings"
+    );
+
+    const clickedSidebarButton = event.target.closest("#sidebar button");
+
+    if (!clickedInsidePanel && !clickedSidebarButton) {
+        sidePanels.forEach(panel => {
+            panel.classList.remove("side-open");
+        });
+    }
+});
+
+
 const themeSelect = document.getElementById('theme-select');
 const htmlElement = document.documentElement;
 

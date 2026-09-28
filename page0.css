@@ -5,12 +5,20 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html, body {
-  display: grid;
-  height: 100%;
+
+html,
+body {
   width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
   place-items: center;
-  background:linear-gradient(90deg, #ff93b0, #ffc7d1, #ff91ae);
+  padding: 16px;
+  background: linear-gradient( 90deg,#ff93b0,#ffc7d1, #ff91ae);
 }
 
 .title {
@@ -36,12 +44,13 @@ html, body {
 }
 .wrapper .title-text {
   display: flex;
-  width: 210%;
+  width: 200%;
 }
 .wrapper .title {
   width: 50%;
-  font-size: 45px;
-  font-weight: bolder;
+  flex-shrink: 0;
+  font-size: 36px;
+  font-weight: 700;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -50,8 +59,9 @@ html, body {
   position: relative;
   display: flex;
   place-content: center;
+  text-align: center;
   gap: 30%;
-  height: 65px;
+  height: 50%;
   width: 100%;
   overflow: hidden;
   margin: 20px 0 10px 0;

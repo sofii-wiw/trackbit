@@ -829,3 +829,198 @@ html[data-theme="black"] footer .cat, .cat2{
         color: #eee;
     }
 }
+
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 165px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(255, 225, 235, 0.95);
+    border: 3px solid #ffabc1;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    box-shadow:5px 5px 0 #c96b87, 5px 8px 20px rgba(150, 50, 85, .2);
+    z-index: 1000;
+}
+
+/* sidebar buttons */
+
+#sidebar button {
+    width: 100%;
+    padding: 10px 6px;
+    border: 2px solid #f3a8bd;
+    border-radius: 13px;
+    background: linear-gradient(180deg,#f788b1,#ffdce7, #f788b1);
+    color: #a83f60;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 3px 3px 0 #d27a94;
+    transition: .2s ease;
+}
+
+#sidebar button:hover {
+    background: linear-gradient(180deg, #fc8aab, #fc5386,#fc8aab);
+    color: white;
+    transform: translateX(4px);
+}
+#adds {
+    display: none;
+}
+
+#add-habit,
+#edit-habit,
+#category-management,
+#reminders,
+#settings {
+    display: none;
+}
+
+#add-habit.side-open,
+#edit-habit.side-open,
+#category-management.side-open,
+#reminders.side-open,
+#settings.side-open {
+    display: block;
+}
+
+
+/* ═══════════════════════════════════════
+   PANEL APPEARANCE
+═══════════════════════════════════════ */
+
+#add-habit,
+#edit-habit,
+#category-management,
+#reminders,
+#settings {
+    position: fixed;
+    left: 185px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    max-width: calc(100vw - 210px);
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, .95);
+    border: 2px solid #f3bfd0;
+    border-radius: 25px;
+    box-shadow:
+        8px 8px 0 #c96b87,
+        0 10px 30px rgba(150, 50, 85, .2);
+}
+
+
+/* ═══════════════════════════════════════
+   BLACK THEME SIDEBAR
+═══════════════════════════════════════ */
+
+html[data-theme="black"] #sidebar {
+    background: rgba(30, 28, 29, .96);
+
+    border-color: #555;
+
+    box-shadow:
+        5px 5px 0 #111,
+        5px 8px 20px rgba(0, 0, 0, .7);
+}
+
+html[data-theme="black"] #sidebar button {
+    background: linear-gradient(
+        180deg,
+        #575757,
+        #303030
+    );
+
+    border-color: #666;
+    color: #eee;
+
+    box-shadow: 3px 3px 0 #111;
+}
+
+html[data-theme="black"] #sidebar button:hover {
+    background: linear-gradient(
+        180deg,
+        #777,
+        #444
+    );
+
+    color: white;
+}
+
+
+/* black theme panels */
+
+html[data-theme="black"] #add-habit.side-open,
+html[data-theme="black"] #edit-habit.side-open,
+html[data-theme="black"] #category-management.side-open,
+html[data-theme="black"] #reminders.side-open,
+html[data-theme="black"] #settings.side-open {
+    background: rgba(29, 27, 28, .97);
+
+    border-color: #4d4c4d;
+
+    box-shadow:
+        6px 6px 0 #111,
+        0 10px 30px rgba(0, 0, 0, .6);
+}
+
+
+/* ═══════════════════════════════════════
+   MOBILE
+═══════════════════════════════════════ */
+
+@media (max-width: 600px) {
+
+    #sidebar {
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 95%;
+        max-width: 400px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        border: 2px solid #ffabc1;
+        border-radius: 20px;
+
+        padding: 7px;
+
+        gap: 5px;
+    }
+
+    #sidebar button {
+        width: auto;
+        flex: 1 1 28%;
+
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+
+    #add-habit,
+    #edit-habit,
+    #category-management,
+    #reminders,
+    #settings {
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 90%;
+        max-width: none;
+
+        max-height: 75vh;
+    }
+}

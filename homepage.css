@@ -22,15 +22,23 @@ body{
 }
 
 #main{
-  height: 80%;
-  width: 70%;
-  margin-top: 10px;
-  padding: 5px;
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+  padding: 5px;
+  margin-top: 10px;
 }
+
+#habit-overview, 
+#analytics, 
+#note, 
+#notes{ 
+}
+
 
 /* ────୨header and pngsৎ──── */
 
@@ -228,7 +236,7 @@ h2 {
 /*────────────────────────୨box box notesৎ────────────────────────*/
 
 #note{
-  max-width: 200dvh;
+  max-width: 100dvh;
   display: flex;
   flex-direction: column;
   width: max-content;
@@ -392,23 +400,45 @@ button:active {
 }
 
 
+/* ════════════════════════════════════════════════════════════
+   REPLACEMENT for the FIRST mobile media query in your file
+   (the one written "max-width: 600px" WITH a space, which sits
+   inside  :root, html[data-theme="pink"] { ... }).
+
+   Replace only the @media block below. Keep the extra "}" that
+   comes right after it in your file; that one closes the pink
+   theme wrapper.
+   ════════════════════════════════════════════════════════════ */
+
 @media screen and (max-width: 600px) {
-*{
-  margin: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* under 16px, iOS Safari zooms the page in when a field is focused */
+  select,
+  input,
+  textarea {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100%;
     overflow-x: hidden;
   }
 
   #main {
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
@@ -417,6 +447,8 @@ button:active {
     text-align: center;
   }
 
+  /* ────୨header and pngsৎ──── */
+
   .hp {
     position: relative;
     width: 100%;
@@ -424,29 +456,30 @@ button:active {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-items: center;
   }
 
   .ht {
     width: 70%;
     max-width: 350px;
+    max-height: none;
     padding: 8px;
     font-size: 14px;
     border: 3px solid rgb(201, 50, 100);
     border-radius: 30px;
     text-align: center;
-    margin-top: 50px ;
+    margin-top: 50px;
+    overflow-wrap: anywhere;
   }
 
-
-  .wings{
+  .wings {
     width: 20px;
   }
 
   .img,
   .img2 {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
   }
 
   h2 {
@@ -457,19 +490,21 @@ button:active {
     border-radius: 20px;
     text-align: center;
     margin: 15px auto;
+    overflow-wrap: anywhere;
   }
 
-.back{
-  position: absolute;
-  bottom: 740px;
-  left: -30px;
-  font-size: 1px;
-  background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: url('https://poempuppy.neocities.org/resources/pixels/ejzc5n.gif'), auto;
-}
+  /* pinned to the top-left corner of the page instead of
+     "bottom: 740px", which pushed it off-screen on shorter phones */
+  .back {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    bottom: auto;
+    margin: 0;
+    font-size: 1px;
+  }
 
+  /* ────୨overviewৎ──── */
 
   #habit-overview {
     width: 95%;
@@ -491,51 +526,28 @@ button:active {
     text-align: left;
   }
 
+  /* ────୨analyticsৎ──── */
+
+ 
   #analytics {
     width: 95%;
     max-width: 400px;
+    height: auto;          
     padding: 15px;
-    margin: 30px;
+    margin: 30px auto;
     font-size: 16px;
     border-radius: 25px;
     text-align: center;
   }
 
+
   .analytics-card {
-    display: flex;  
-    overflow-x: scroll;
-    scroll-snap-align: start;
-    gap: 20vh;
-    background: #fff0f5;
-    border-radius: 30px;
-    font-size: 20px;
-    box-shadow: 0 4px 10px #ffb3c6;
-    color: #8b1e3f;
-    width: 90%;
-    max-width: 100%;
-    padding: 15px;
-    border: 2px solid #ff9fbf;
-    background-color: rgb(255, 221, 226);
-    margin: 20px;
-    transition: 0.4s;
-}
-
-.analytics-card::-webkit-scrollbar{
-  width: 10px;
-  height: 20px;
-}
-
-.analytics-card::-webkit-scrollbar-track{
-  background-color: #8b1e3f;
-  border-radius: 10px;
-
-}
-
-.analytics-card::-webkit-scrollbar-thumb{
-  background-image: url("https://poempuppy.neocities.org/resources/pixels/s1ebaq.gif");
-  background-repeat: repeat-x;
-  background-position: 10px;
-}
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    gap: 16px;             
+    font-size: 15px;
+  }
 
   .analytics-card h3 {
     width: 100%;
@@ -562,13 +574,98 @@ button:active {
     height: 100%;
   }
 
+  /* ────୨notes (add note + notes list)ৎ──── */
+
+  #add-note{
+    width: 80%;
+    max-width: 400px;
+  }
+
+  #notes {
+    width: 95%;
+    max-width: 400px;
+    height: auto;
+    padding: 15px 12px;
+    margin: 30px auto;
+    border-width: 3px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #note,
+  #note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #note-form select,
+  #note-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  #note-form button {
+    width: 100%;
+    margin: 4px 0 0;
+    font-size: 15px;
+  }
+
+  #notes-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #notes-list h3 {
+    padding-left: 12px;
+    padding-top: 8px;
+    font-size: 18px;
+  }
+
+  .notes-card {
+    width: auto;
+    margin: 0;
+    padding: 4px;
+    border-radius: 16px;
+  }
+
+  .notes-card p {
+    margin: 4px;
+    padding: 10px 12px;
+    font-size: 16px;
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .note-date {
+    padding-left: 12px;
+    font-size: 13px;
+  }
+
+  .delete-note {
+    margin: 8px 12px 10px;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* ────୨buttonsৎ──── */
+
   .btn {
     position: static;
     max-width: 100%;
     font-size: 16px;
   }
 
-}
+  button:hover,
+  #note-form button:hover,
+  .delete-note:hover {
+    transform: scale(1.03);
+  }
 }
 
 
@@ -883,4 +980,4 @@ html[data-theme="black"] a:hover {
         color: #eee;
     }
 }
-
+}
