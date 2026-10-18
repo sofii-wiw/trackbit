@@ -33,13 +33,6 @@ body{
   margin-top: 10px;
 }
 
-#habit-overview, 
-#analytics, 
-#note, 
-#notes{ 
-}
-
-
 /* ────୨header and pngsৎ──── */
 
 .ht {
@@ -398,18 +391,287 @@ button:active {
    font-size: large;
    color: rgb(180, 36, 36);
 }
+}
 
 
-/* ════════════════════════════════════════════════════════════
-   REPLACEMENT for the FIRST mobile media query in your file
-   (the one written "max-width: 600px" WITH a space, which sits
-   inside  :root, html[data-theme="pink"] { ... }).
+/* ══════════════════════════════════════════════════════════════════════════════ */
 
-   Replace only the @media block below. Keep the extra "}" that
-   comes right after it in your file; that one closes the pink
-   theme wrapper.
-   ════════════════════════════════════════════════════════════ */
+html[data-theme="black"] body {
+    background-color: #100b0f;
+    color: #e6d5dc;
+}
 
+html[data-theme="black"] body {
+    background-image: url("https://i.pinimg.com/736x/f6/42/d9/f642d980456db59db4e2f6fbadacb4b7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+html[data-theme="black"],
+html[data-theme="black"] body,
+html[data-theme="black"] #main,
+html[data-theme="black"] .ht,
+html[data-theme="black"] h2,
+html[data-theme="black"] #habit-overview,
+html[data-theme="black"] #analytics,
+html[data-theme="black"] .analytics-card,
+html[data-theme="black"] #notes,
+html[data-theme="black"] #add-note,
+html[data-theme="black"] .notes-card,
+html[data-theme="black"] button,
+html[data-theme="black"] select,
+html[data-theme="black"] textarea,
+html[data-theme="black"] input {
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* ───────────── HEADER ───────────── */
+
+html[data-theme="black"] .ht {
+    color: #e4e4e4;
+    background: linear-gradient(rgba(58,57,58,.75),rgba(29,28,29,.9));
+    border: 4px solid #666;                 /* was 3px, pink is 4px */
+    box-shadow: 5px 5px 15px rgba(0,0,0,.55);
+    text-shadow: 2px 2px 4px #111;
+}
+
+html[data-theme="black"] .ht:hover {
+    background: linear-gradient(#626262,#303030);
+    color: #fff;
+    box-shadow: 5px 8px 18px rgba(0,0,0,.7);
+    transform: translateY(-2px);
+}
+
+/* ───────────── BACK BUTTON ───────────── */
+
+html[data-theme="black"] .back {
+    filter: grayscale(1) brightness(.75);
+    opacity: .9;
+}
+
+html[data-theme="black"] .back:hover {
+    filter: grayscale(.5) brightness(1);
+}
+
+/* ───────────── HEADINGS ───────────── */
+
+html[data-theme="black"] h2 {
+    color: #e4e4e4;
+    background: linear-gradient(180deg,#4d4c4d,#292829);
+    border: 2px solid #696969;
+    box-shadow: 5px 5px 0 #171617;
+    text-shadow: 2px 2px 4px #111;
+}
+
+/* ───────────── HABIT OVERVIEW ───────────── */
+
+html[data-theme="black"] #habit-overview {
+    color: #ded9dc;
+    background: rgba(37,36,37,.94);
+    border: 2px solid #4d4c4d;              
+    box-shadow: 5px 5px 0 #191819;
+}
+
+html[data-theme="black"] #overview-content,
+html[data-theme="black"] #overview-content p {
+    color: #ded9dc;
+    background: #3a393a;
+    border: 1px solid #555455;
+    padding: 14px;                         
+}
+
+html[data-theme="black"] #overview-content span {
+    color: #ddd;
+    text-shadow: 2px 2px 4px #222;
+}
+
+html[data-theme="black"] #habit-overview:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 7px 6px #353335;
+}
+
+/* ───────────── ANALYTICS ───────────── */
+
+html[data-theme="black"] #analytics {
+    background: #1d1b1c;
+    border: 2px solid #4d4c4c;              
+    color: #ded9dc;
+    box-shadow: 5px 5px 0 #242424;
+}
+
+html[data-theme="black"]  #analytics:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 7px 6px #353335;
+}
+
+html[data-theme="black"] .analytics-card {
+    background: #3a393a;
+    border: 2px solid #5b595a;
+    color: #dfd0d6;
+    box-shadow: 4px 5px 10px rgba(0,0,0,.5);
+}
+
+html[data-theme="black"] .analytics-card h3 {
+    color: #e2dfe0;
+    text-shadow: 2px 2px 3px #222;
+}
+
+html[data-theme="black"] .analytics-card p {
+    color: #ddd8da;
+    background: #292829;
+}
+
+html[data-theme="black"] .analytics-progress {
+    background: #222122;
+}
+
+html[data-theme="black"] .analytics-progress-bar {
+    background: linear-gradient(90deg,#666,#b5b5b5,#666);
+}
+
+html[data-theme="black"] .analytics-card::-webkit-scrollbar-track {
+    background: #242324;
+}
+
+html[data-theme="black"] .analytics-card::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,#555,#999,#555);
+    border-radius: 20px;
+    border: 2px solid #292829;
+}
+
+/* ───────────── NOTES ───────────── */
+
+html[data-theme="black"] #notes,
+html[data-theme="black"] #add-note {
+    background: rgba(29,27,28,.95);
+    border: 4px solid #4d4c4c;             
+    color: #dfd0d6;
+    box-shadow: 5px 5px 0 #242424;
+}
+
+html[data-theme="black"] #notes h2,
+html[data-theme="black"] #add-note h2 {
+    background: linear-gradient(180deg,#555455,#303030);
+    color: #eee;
+    border-color: #6b696a;
+}
+
+/* ───────────── NOTE CARDS ───────────── */
+
+html[data-theme="black"] .notes-card {
+    background: rgba(49,49,49,.95);
+    border: 2px solid #5e5c5d;
+    color: #dfd0d6;
+    box-shadow: 4px 5px 0 #1a191a;
+}
+
+html[data-theme="black"] .notes-card:hover {
+    background: #3d3c3d;
+    border-color: #858285;
+    box-shadow: 5px 6px 12px rgba(0,0,0,.6);
+    transform: translateY(-2px);
+}
+
+html[data-theme="black"] #note {
+    color: #e3dadd;
+}
+
+html[data-theme="black"] .notes-card p {
+    color: #dfd0d6;
+    background: #292829;
+    border: 1px solid #4e4d4e;
+    padding: 14px;                          
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+html[data-theme="black"] .note-date {
+    color: #aaa6a8;
+    text-shadow: 2px 2px 3px #181718;
+}
+
+/* ───────────── NOTE INPUT ───────────── */
+
+html[data-theme="black"] #note-input,
+html[data-theme="black"] select {
+    color: #dedadd;
+    background: #252425;
+    border: 2px solid #646164;
+    border-radius: 20px;
+    outline: none;
+}
+
+html[data-theme="black"] #note-input::placeholder {
+    color: #969194;
+}
+
+html[data-theme="black"] #note-input:focus,
+html[data-theme="black"] select:focus {
+    border-color: #a6a3a5;
+    box-shadow: 0 0 10px rgba(150,150,150,.25);
+}
+
+html[data-theme="black"] option {
+    color: #ddd;
+    background: #1f1e1f;
+}
+
+/* ───────────── BUTTONS ───────────── */
+
+html[data-theme="black"] .btn,
+html[data-theme="black"] #note-form button,
+html[data-theme="black"] .delete-note {
+    background: linear-gradient(180deg,#575757,#303030,#575757);
+    border: 2px solid #616161;
+    color: #e0e0e0;
+    box-shadow: 3px 4px 10px rgba(0,0,0,.45);
+    text-shadow: 2px 2px 3px #222;
+}
+
+html[data-theme="black"] .btn {
+    padding: 10.5px 28px;                   
+}
+
+html[data-theme="black"] #note-form button,
+html[data-theme="black"] .delete-note {
+    padding: 8px 18px;                      
+}
+
+html[data-theme="black"] .btn:hover,
+html[data-theme="black"] #note-form button:hover,
+html[data-theme="black"] .delete-note:hover,
+html[data-theme="black"] button:hover {
+    background: linear-gradient(180deg,#757575,#c7c7c7,#757575);
+    color: #333;
+    box-shadow: 4px 5px 12px rgba(0,0,0,.55);
+    transform: translateY(-2px) scale(1.02);
+}
+
+html[data-theme="black"] button:active {
+    background: #292929;
+    color: #eee;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+/* ───────────── LINKS ───────────── */
+
+html[data-theme="black"] a {
+    color: #d8d3d5;
+}
+
+html[data-theme="black"] a:hover {
+    color: #fff;
+}
+
+
+
+html[data-theme="pink"], html[data-theme="black"]{
 @media screen and (max-width: 600px) {
   * {
     margin: 0;
@@ -420,7 +682,6 @@ button:active {
     max-width: 100%;
   }
 
-  /* under 16px, iOS Safari zooms the page in when a field is focused */
   select,
   input,
   textarea {
@@ -464,8 +725,7 @@ button:active {
     max-width: 350px;
     max-height: none;
     padding: 8px;
-    font-size: 14px;
-    border: 3px solid rgb(201, 50, 100);
+    font-size: 17px;
     border-radius: 30px;
     text-align: center;
     margin-top: 50px;
@@ -478,8 +738,8 @@ button:active {
 
   .img,
   .img2 {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
   }
 
   h2 {
@@ -493,8 +753,6 @@ button:active {
     overflow-wrap: anywhere;
   }
 
-  /* pinned to the top-left corner of the page instead of
-     "bottom: 740px", which pushed it off-screen on shorter phones */
   .back {
     position: absolute;
     top: 8px;
@@ -577,7 +835,8 @@ button:active {
   /* ────୨notes (add note + notes list)ৎ──── */
 
   #add-note{
-    width: 80%;
+    font-size: 15px;
+    width: 100%;
     max-width: 400px;
   }
 
@@ -589,7 +848,7 @@ button:active {
     margin: 30px auto;
     border-width: 3px;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
 
@@ -666,318 +925,131 @@ button:active {
   .delete-note:hover {
     transform: scale(1.03);
   }
+
+  #sidebar {
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        max-width: 400px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 2px solid #ffabc1;
+        border-radius: 20px;
+        padding: 7px;
+        gap: 5px;
+    }
+
+    #sidebar button {
+        width: auto;
+        flex: 1 1 28%;
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+
+    #add-note {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: none;
+        max-height: 75vh;
+    }
+}
 }
 
 
-/* ══════════════════════════════════════════════════════════════════════════════ */
-html[data-theme="black"],
-html[data-theme="black"] body {
-    background-color: #100b0f;
-    color: #e6d5dc;
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 10%;
+    width: 165px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(255, 225, 235, 0.95);
+    border: 3px solid #ffabc1;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    box-shadow:5px 5px 0 #c96b87, 5px 8px 20px rgba(150, 50, 85, .2);
+    z-index: 1000;
 }
 
-html[data-theme="black"] body {
-    background-image: url("https://i.pinimg.com/736x/f6/42/d9/f642d980456db59db4e2f6fbadacb4b7.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* sidebar buttons */
+
+#sidebar button {
+    width: 100%;
+    padding: 10px 6px;
+    border: 2px solid #f3a8bd;
+    border-radius: 13px;
+    background: linear-gradient(180deg,#f788b1,#ffdce7, #f788b1);
+    color: #a83f60;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 3px 3px 0 #d27a94;
+    transition: .2s ease;
 }
 
-html[data-theme="black"],
-html[data-theme="black"] body,
-html[data-theme="black"] #main,
-html[data-theme="black"] .ht,
-html[data-theme="black"] h2,
-html[data-theme="black"] #habit-overview,
-html[data-theme="black"] #analytics,
-html[data-theme="black"] .analytics-card,
-html[data-theme="black"] #notes,
-html[data-theme="black"] #add-note,
-html[data-theme="black"] .notes-card,
-html[data-theme="black"] button,
-html[data-theme="black"] select,
-html[data-theme="black"] textarea,
-html[data-theme="black"] input {
-    transition:
-        background-color .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease;
+#sidebar button:hover {
+    background: linear-gradient(180deg, #fc8aab, #fc5386,#fc8aab);
+    color: white;
+    transform: translateX(4px);
 }
 
-/* ───────────── HEADER ───────────── */
-
-html[data-theme="black"] .ht {
-    color: #e4e4e4;
-    background: linear-gradient(rgba(58,57,58,.75),rgba(29,28,29,.9));
-    border: 3px solid #666;
-    box-shadow: 5px 5px 15px rgba(0,0,0,.55);
-    text-shadow: 2px 2px 4px #111;
+#add-note{
+    display: none;
 }
 
-html[data-theme="black"] .ht:hover {
-    background: linear-gradient(#626262,#303030);
-    color: #fff;
-    box-shadow: 5px 8px 18px rgba(0,0,0,.7);
-    transform: translateY(-2px);
+#add-note.side-open{
+    display: block;
 }
 
-/* ───────────── BACK BUTTON ───────────── */
-
-html[data-theme="black"] .back {
-    filter: grayscale(1) brightness(.75);
-    opacity: .9;
+#add-note{
+    position: fixed;
+    left: 185px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    max-width: calc(100vw - 210px);
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, .95);
+    border: 2px solid #f3bfd0;
+    border-radius: 25px;
+    box-shadow:
+        8px 8px 0 #c96b87,
+        0 10px 30px rgba(150, 50, 85, .2);
 }
 
-html[data-theme="black"] .back:hover {
-    filter: grayscale(.5) brightness(1);
+
+html[data-theme="black"] #sidebar {
+    background: rgba(30, 28, 29, .96);
+    border-color: #555;
+    box-shadow:
+        5px 5px 0 #111,
+        5px 8px 20px rgba(0, 0, 0, .7);
 }
 
-/* ───────────── HEADINGS ───────────── */
-
-html[data-theme="black"] h2 {
-    color: #e4e4e4;
-    background: linear-gradient(180deg,#4d4c4d,#292829);
-    border: 2px solid #696969;
-    box-shadow: 5px 5px 0 #171617;
-    text-shadow: 2px 2px 4px #111;
-}
-
-/* ───────────── HABIT OVERVIEW ───────────── */
-
-html[data-theme="black"] #habit-overview {
-    color: #ded9dc;
-    background: rgba(37,36,37,.94);
-    border: 3px solid #4d4c4d;
-    box-shadow: 5px 5px 0 #191819;
-}
-
-html[data-theme="black"] #overview-content,
-html[data-theme="black"] #overview-content p {
-    color: #ded9dc;
-    background: #3a393a;
-    border: 1px solid #555455;
-}
-
-html[data-theme="black"] #overview-content span {
-    color: #ddd;
-    text-shadow: 2px 2px 4px #222;
-}
-
-html[data-theme="black"] #habit-overview:hover {
-    transform: translateY(4px);
-    box-shadow: 7px 8px 0 #171617;
-}
-
-/* ───────────── ANALYTICS ───────────── */
-
-html[data-theme="black"] #analytics {
-    background: #1d1b1c;
-    border: 3px solid #4d4c4c;
-    color: #ded9dc;
-    box-shadow: 5px 5px 0 #242424;
-}
-
-html[data-theme="black"] .analytics-card {
-    background: #3a393a;
-    border: 2px solid #5b595a;
-    color: #dfd0d6;
-    box-shadow: 4px 5px 10px rgba(0,0,0,.5);
-}
-
-html[data-theme="black"] .analytics-card h3 {
-    color: #e2dfe0;
-    text-shadow: 2px 2px 3px #222;
-}
-
-html[data-theme="black"] .analytics-card p {
-    color: #ddd8da;
-    background: #292829;
-}
-
-html[data-theme="black"] .analytics-progress {
-    background: #222122;
-}
-
-html[data-theme="black"] .analytics-progress-bar {
-    background: linear-gradient(90deg,#666,#b5b5b5,#666);
-}
-
-html[data-theme="black"] .analytics-card::-webkit-scrollbar-track {
-    background: #242324;
-}
-
-html[data-theme="black"] .analytics-card::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg,#555,#999,#555);
-    border-radius: 20px;
-    border: 2px solid #292829;
-}
-
-/* ───────────── NOTES ───────────── */
-
-html[data-theme="black"] #notes,
-html[data-theme="black"] #add-note {
-    background: rgba(29,27,28,.95);
-    border: 3px solid #4d4c4c;
-    color: #dfd0d6;
-    box-shadow: 5px 5px 0 #242424;
-}
-
-html[data-theme="black"] #notes h2,
-html[data-theme="black"] #add-note h2 {
-    background: linear-gradient(180deg,#555455,#303030);
+html[data-theme="black"] #sidebar button {
+    background: linear-gradient( 180deg, #575757, #303030);
+    border-color: #666;
     color: #eee;
-    border-color: #6b696a;
+    box-shadow: 3px 3px 0 #111;
 }
 
-/* ───────────── NOTE CARDS ───────────── */
-
-html[data-theme="black"] .notes-card {
-    background: rgba(49,49,49,.95);
-    border: 2px solid #5e5c5d;
-    color: #dfd0d6;
-    box-shadow: 4px 5px 0 #1a191a;
+html[data-theme="black"] #sidebar button:hover {
+    background: linear-gradient( 180deg,#777, #444);
+    color: white;
 }
 
-html[data-theme="black"] .notes-card:hover {
-    background: #3d3c3d;
-    border-color: #858285;
-    box-shadow: 5px 6px 12px rgba(0,0,0,.6);
-    transform: translateY(-2px);
-}
-
-html[data-theme="black"] #note {
-    color: #e3dadd;
-}
-
-html[data-theme="black"] .notes-card p {
-    color: #dfd0d6;
-    background: #292829;
-    border: 1px solid #4e4d4e;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-html[data-theme="black"] .note-date {
-    color: #aaa6a8;
-    text-shadow: 2px 2px 3px #181718;
-}
-
-/* ───────────── NOTE INPUT ───────────── */
-
-html[data-theme="black"] #note-input,
-html[data-theme="black"] select {
-    color: #dedadd;
-    background: #252425;
-    border: 2px solid #646164;
-    border-radius: 20px;
-    outline: none;
-}
-
-html[data-theme="black"] #note-input::placeholder {
-    color: #969194;
-}
-
-html[data-theme="black"] #note-input:focus,
-html[data-theme="black"] select:focus {
-    border-color: #a6a3a5;
-    box-shadow: 0 0 10px rgba(150,150,150,.25);
-}
-
-html[data-theme="black"] option {
-    color: #ddd;
-    background: #1f1e1f;
-}
-
-/* ───────────── BUTTONS ───────────── */
-
-html[data-theme="black"] .btn,
-html[data-theme="black"] #note-form button,
-html[data-theme="black"] .delete-note {
-    background: linear-gradient(180deg,#575757,#303030,#575757);
-    border: 2px solid #616161;
-    color: #e0e0e0;
-    box-shadow: 3px 4px 10px rgba(0,0,0,.45);
-    text-shadow: 2px 2px 3px #222;
-}
-
-html[data-theme="black"] .btn:hover,
-html[data-theme="black"] #note-form button:hover,
-html[data-theme="black"] .delete-note:hover,
-html[data-theme="black"] button:hover {
-    background: linear-gradient(180deg,#757575,#c7c7c7,#757575);
-    color: #333;
-    box-shadow: 4px 5px 12px rgba(0,0,0,.55);
-    transform: translateY(-2px) scale(1.02);
-}
-
-html[data-theme="black"] button:active {
-    background: #292929;
-    color: #eee;
-    transform: scale(.98);
-    box-shadow: none;
-}
-
-/* ───────────── LINKS ───────────── */
-
-html[data-theme="black"] a {
-    color: #d8d3d5;
-}
-
-html[data-theme="black"] a:hover {
-    color: #fff;
-}
-
-/* ───────────── MOBILE ───────────── */
-
-@media screen and (max-width:600px) {
-
-    html[data-theme="black"] .ht {
-        background: linear-gradient(180deg,#505050,#292929);
-        border-color: #666;
-        color: #eee;
-    }
-
-    html[data-theme="black"] #habit-overview,
-    html[data-theme="black"] #analytics {
-        background: rgba(29,28,29,.95);
-        border-color: #4d4c4d;
-        box-shadow: 4px 4px 0 #191819;
-    }
-
-    html[data-theme="black"] .analytics-card {
-        background: #363536;
-        border-color: #555455;
-    }
-
-    html[data-theme="black"] #notes,
-    html[data-theme="black"] #add-note {
-        background: rgba(29,27,28,.96);
-        border-color: #4d4c4d;
-    }
-
-    html[data-theme="black"] .notes-card {
-        background: #363536;
-        border-color: #5b595a;
-    }
-
-    html[data-theme="black"] .notes-card p {
-        background: #292829;
-        color: #ddd8da;
-    }
-
-    html[data-theme="black"] #note-input,
-    html[data-theme="black"] select {
-        background: #252425;
-        color: #dedadd;
-        border-color: #646164;
-    }
-
-    html[data-theme="black"] .btn,
-    html[data-theme="black"] #note-form button,
-    html[data-theme="black"] .delete-note {
-        background: linear-gradient(180deg,#575757,#303030,#575757);
-        color: #eee;
-    }
-}
+html[data-theme="black"] #add-note.side-open {
+    background: rgba(29, 27, 28, .97);
+    border-color: #4d4c4d;
+    box-shadow: 6px 6px 0 #111, 0 10px 30px rgba(0, 0, 0, .6);
 }

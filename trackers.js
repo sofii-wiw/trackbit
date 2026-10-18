@@ -865,6 +865,7 @@ function clearAllData() {
     alert("All habit data has been cleared.");
 }
 
+
 const sidebarButtons = document.querySelectorAll("#sidebar button");
 
 const sidePanels = [

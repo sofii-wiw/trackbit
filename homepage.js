@@ -117,7 +117,6 @@ function renderNotes() {
     });
 }
 
-// ---- Submit a new note ----
 if (noteForm) {
     noteForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -154,10 +153,8 @@ if (noteForm) {
     });
 }
 
-// ---- Init ----
 loadHabits();
 renderNotes();
-
 
 const themeSelect = document.getElementById('theme-select');
 const htmlElement = document.documentElement;
@@ -169,4 +166,43 @@ themeSelect.value = savedTheme;
 
 themeSelect.addEventListener('change', (event) => { const selectedTheme = event.target.value;
   htmlElement.setAttribute('data-theme', selectedTheme);
-  localStorage.setItem('theme', selectedTheme);})
+  localStorage.setItem('theme', selectedTheme);
+});
+
+
+const sidebarButtons = document.querySelectorAll("#sidebar button");
+
+const sidePanels = [
+    document.getElementById("add-note")
+];
+
+sidebarButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const panelId = button.dataset.panel;
+        const panel = document.getElementById(panelId);
+        // Close other panels
+        sidePanels.forEach(section => {
+            section.classList.remove("side-open");
+        });
+        // Open selected panel
+        if (panel) {
+            panel.classList.add("side-open");
+        }
+    });
+});
+// Close panel when clicking outside
+document.addEventListener("click", (event) => {
+
+    const clickedInsidePanel = event.target.closest(
+        "#add-note"
+    );
+
+    const clickedSidebarButton = event.target.closest("#sidebar button");
+
+    if (!clickedInsidePanel && !clickedSidebarButton) {
+        sidePanels.forEach(panel => {
+            panel.classList.remove("side-open");
+        });
+    }
+});

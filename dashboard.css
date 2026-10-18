@@ -394,216 +394,6 @@ footer:hover{
     transition: 0.4s ease;
     box-shadow: 10px 8px 8px #b65376;
 }
-
-
-/*  mobile  */
-@media (max-width: 768px) {
-
-  * {
-    padding: 5px;
-  }
-
-  html {
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-  }
-
-  body {
-    width: 100%;
-    min-height: 100vh;
-    border: 3px solid #951562;
-    border-radius: 25px;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    width: 90%;
-    max-width: 100%;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 5px;
-    padding: 10px 20px;
-    border-radius: 50px;
-  }
-
-  a {
-    margin-right: 90%;
-    width: fit-content;
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 8px;
-    font-size: 10px;
-  }
-
-  h2 {
-    width: 90%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 23px;
-    text-align: center;
-    border-radius: 25px;
-    box-shadow: 4px 4px #7b083c;
-  }
-
-  .cats {
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    font-size: x-large;
-  }
-
-  .wrap {
-    width: 100%;
-    max-width: 100%;
-    margin: 15px auto;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: none;
-  }
-
-  .features,
-  .how {
-    width: 90%;
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 25px;
-  }
-
-  .features::before,
-  .how::before {
-    font-size: 25px;
-  }
-
-  .features li,
-  .how li {
-    width: 100%;
-    max-width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .about {
-    width: 90%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 25px;
-  }
-
-  .about::before {
-    display: block;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .about li:hover {
-    max-width: 100%;
-    font-size: 20px;
-    transform: translateX(0);
-  }
-
-  .stckrs {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .brd2 {
-    width: 90%;
-    font-size: 14px;
-  }
-
-  footer {
-    width: 90%;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  footer:hover {
-    font-size: 20px;
-    transform: translateY(-5px);
-  }
-}
-
-
-
-@media (max-width: 450px) {
-
-  body {
-    max-width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .wrap {
-    width: fit-content;
-    padding: 12px;
-    border-radius: 25px;
-    box-shadow:
-      5px 5px 15px rgba(183, 28, 75, 0.2);
-  }
-
-.db{
-  max-width: 100%;
-  font-size: 12px;
-}
-  .db-btns {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .hmp-btn,
-  .abt-btn,
-  .tck-btn {
-    width: fit-content;
-    max-width: 100%;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-
-  .intro {
-    width: 300px;
-    max-width: 100%;
-    margin-top: 25px;
-    padding: 12px;
-    border-radius: 25px;
-  }
-
-  .wc {
-    max-width: 100%;
-    font-size: 20px;
-    padding: 8px;
-    text-shadow: 4px 3px 6px #d02675;
-  }
-
-  h2 {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 15px;
-  }
-  .stckrs img{
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 29%;
-  height: auto;
-  margin: 0 auto 50px;
-}
-}
 }
 
 /*_____________________________themes_____________________________*/
@@ -641,7 +431,7 @@ html[data-theme="black"] select {
 
 
 /* ==========================================
-   🖤 MAIN CONTAINER
+    MAIN CONTAINER
    ========================================== */
 
 html[data-theme="black"] .wrapp {
@@ -695,7 +485,7 @@ html[data-theme="black"] .sp {
 
 
 /* ==========================================
-   🎀 BUTTONS
+    BUTTONS
    ========================================== */
 
 html[data-theme="black"] .db-btns,
@@ -805,7 +595,7 @@ html[data-theme="black"] .why {
 
 
 /* ==========================================
-   🎀 ABOUT CREATOR
+    ABOUT CREATOR
    ========================================== */
 
 html[data-theme="black"] .about1 {
@@ -827,11 +617,6 @@ html[data-theme="black"] .about1 li:hover {
 html[data-theme="black"] .about1 li::before {
     color: #c5c3c4;
 }
-
-
-/* ==========================================
-   🔗 LINKS
-   ========================================== */
 
 html[data-theme="black"] a {
     color: #d8d3d5;
@@ -859,9 +644,16 @@ html[data-theme="black"] footer:hover {
     box-shadow: 4px 5px 12px rgba(94, 90, 90, 0.4);
 }
 
+html[data-theme="black"] .blood{
+      content: url('https://artwork.neocities.org/pixels/tiny/sanrio/201004132326198ed.gif');
+    }
 
+html[data-theme="black"] .line{
+      content: url('https://artwork.neocities.org/pixels/tiny/sanrio/SanrioXmas8.gif');
+    }
+    
 /* ==========================================
-   🌙 THEME SELECT
+    THEME SELECT
    ========================================== */
 
 html[data-theme="black"] select {
@@ -878,257 +670,264 @@ html[data-theme="black"] option {
 }
 
 
-@media (max-width: 768px) {
+html:root {
+  @media (max-width: 768px) {
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-  * {
-    padding: 5px;
+    body {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;       
+      background-position: center;
+      background-size: cover;
+      border: 3px solid #951562;
+      border-radius: 25px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      width: 90%;
+      max-width: 100%;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 5px;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    a {
+      width: fit-content;
+      max-width: 300px;
+      margin: 10px;
+      padding: 8px;
+      font-size: 10px;
+    }
+
+    h2 {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 4px 4px #7b083c;
+    }
+
+    .at {
+      max-width: 90%;
+      padding: 8px 24px;
+      font-size: 22px;
+    }
+
+    .cats {
+      display: flex;
+      flex-direction: row;
+      place-items: center;
+      font-size: x-large;
+    }
+
+    .wrap {
+      max-width: 100%;
+      margin: 15px auto;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: none;
+      border-radius: 20px;
+    }
+
+    .wrapp,
+    .intro {
+      max-width: 80%;
+      margin: 15px auto;
+      gap: 10px;
+      box-shadow: none;
+      border-radius: 20px;
+    }
+
+    .wrapp {
+      height: 280px;
+    }
+
+    .wc,
+    .sp {
+      width: 100%;
+      font-size: 15px;
+    }
+
+    .sp {
+      margin: 8px 0;
+    }
+
+    .features,
+    .how {
+      width: 90%;
+      max-width: 100%;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 25px;
+    }
+
+    .features::before,
+    .how::before {
+      font-size: 25px;
+    }
+
+    .features li,
+    .how li {
+      width: 100%;
+      max-width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .about1 {
+      max-width: 100%;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: 15px;
+      border-radius: 20px;
+    }
+
+    .about1::before {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .about1 li{
+      padding: 10px;
+      max-width: 100%;
+    }
+
+    .about1 li:hover {
+      max-width: 100%;
+      transform: translateY(-3px);
+    }
+
+    .stckrs{
+      width: 50%;
+      gap: 30px;
+    }
+
+    .brd2 {
+      width: 90%;
+      font-size: 14px;
+    }
+
+    footer {
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    footer:hover {
+      width: 90%;
+      font-size: 17px;
+      transform: translateY(-3px);
+    }
   }
 
- 
-  body {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;      
-    background-position: center;
-    background-size: cover;
-    border: 3px solid #951562;
-    border-radius: 25px;
-    overflow-x: hidden;
-  }
 
-  h1 {
-    width: 90%;
-    max-width: 100%;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 5px;
-    padding: 10px 20px;
-    border-radius: 50px;
-  }
+  @media (max-width: 450px) {
 
-  a {
-    width: fit-content;
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 8px;
-    font-size: 10px;
-  }
+    body {
+      max-width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  h2 {
-    width: 90%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 23px;
-    text-align: center;
-    border-radius: 25px;
-    box-shadow: 4px 4px #7b083c;
-  }
+    .wrap {
+      width: fit-content;
+      padding: 7px;
+      border-radius: 15px;
+      box-shadow: 5px 5px 15px rgba(183, 28, 75, 0.2);
+    }
 
-  .at {
-    max-width: 90%;
-    padding: 8px 24px;
-    font-size: 22px;
-  }
+    .db {
+      max-width: 100%;
+      font-size: 12px;
+    }
 
-  
-  .wrapp {
-    width: 95%;
-    margin: 16px auto;    
-  }
+    .db-btns {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
 
- 
-  .sp {
-    width: 100%;
-    max-width: 70%;
-    margin: 8px 0;
-    font-size: 10px;
-  }
+    .hmp-btn,
+    .abt-btn,
+    .tck-btn {
+      width: fit-content;
+      max-width: 100%;
+      font-size: 14px;
+      padding: 8px 12px;
+    }
 
- 
-  .why {
-    width: 100%;
-    max-width: 100%;
-    margin: 15px 0;
-    font-size: 16px;
-  }
+    .at {
+      padding: 6px 18px;
+      font-size: 20px;
+    }
 
-  .cats {
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    font-size: x-large;
-  }
+    .intro {
+      width: 300px;
+      max-width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 25px;
+    }
 
-  .wrap {
-    width: 100%;
-    max-width: 100%;
-    margin: 15px auto;
-    flex-direction: column;
-    gap: 20px;
-    box-shadow: none;
-  }
+    .wc {
+      max-width: 100%;
+      font-size: 20px;
+      padding: 8px;
+      text-shadow: 4px 3px 6px #d02675;
+    }
 
-  .features,
-  .how {
-    width: 90%;
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 10px;
-  }
+    h2 {
+      width: 100%;
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 15px;
+    }
 
-  .features::before,
-  .how::before {
-    font-size: 25px;
-  }
-
-  .features li,
-  .how li {
-    width: 100%;
-    max-width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
- 
-  .about1 {
-    width: 90%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 10px;
-  }
-
-  .about1::before {
-    display: block;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .about1 li:hover {
-    max-width: 100%;
-    font-size: 20px;
-    transform: none;
-  }
-
-  .stckrs {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .brd2 {
-    width: 90%;
-    font-size: 14px;
-  }
-
-  footer {
-    width: 90%;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
-
-
-  footer:hover {
-    width: 90%;
-    font-size: 20px;
-    transform: translateY(-5px);
-  }
-
-
-
-
-@media (max-width: 450px) {
-
-  body {
-    max-width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .wrap {
-    width: fit-content;
-    padding: 12px;
-    border-radius: 25px;
-    box-shadow:
-      5px 5px 15px rgba(183, 28, 75, 0.2);
-  }
-
-  .db {
-    max-width: 100%;
-    font-size: 12px;
-  }
-
-  .db-btns {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .hmp-btn,
-  .abt-btn,
-  .tck-btn {
-    width: fit-content;
-    max-width: 100%;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .at {
-    padding: 6px 18px;
-    font-size: 20px;
-  }
-
-  .intro {
-    width: 300px;
-    max-width: 100%;
-    margin-top: 25px;
-    padding: 12px;
-    border-radius: 25px;
-  }
-
-  .wc {
-    max-width: 100%;
-    font-size: 20px;
-    padding: 8px;
-    text-shadow: 4px 3px 6px #d02675;
-  }
-
-  h2 {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 15px;
-  }
-
-  .stckrs img {
-    width: 29%;
-    height: auto;
-    margin: 0 auto 50px;
+    /* display: grid does nothing on an <img>, so it was removed */
+    .stckrs img {
+      width: 29%;
+      height: auto;
+      margin: 0 auto 50px;
+    }
   }
 }
-}
 
+html[data-theme="black"] {
 
+  @media (max-width: 768px) {
 
-@media (max-width: 768px) {
+    body {
+      border-color: #ffd7ea;
+    }
 
-  html[data-theme="black"] body {
-    border-color: #4d4c4c;
+    h2 {
+      box-shadow: 4px 4px #3f3f3f;
+    }
   }
 
-  
-  html[data-theme="black"] .wrapp {
-    height: auto;
-    min-height: 120px;
+  @media (max-width: 450px) {
+
+    .wrap {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .wc {
+      text-shadow: 4px 3px 6px #c5bec1;
+    }
   }
 }

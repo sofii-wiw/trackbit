@@ -889,11 +889,6 @@ html[data-theme="black"] footer .cat, .cat2{
     display: block;
 }
 
-
-/* ═══════════════════════════════════════
-   PANEL APPEARANCE
-═══════════════════════════════════════ */
-
 #add-habit,
 #edit-habit,
 #category-management,
@@ -917,10 +912,6 @@ html[data-theme="black"] footer .cat, .cat2{
         0 10px 30px rgba(150, 50, 85, .2);
 }
 
-
-/* ═══════════════════════════════════════
-   BLACK THEME SIDEBAR
-═══════════════════════════════════════ */
 
 html[data-theme="black"] #sidebar {
     background: rgba(30, 28, 29, .96);
@@ -955,9 +946,6 @@ html[data-theme="black"] #sidebar button:hover {
     color: white;
 }
 
-
-/* black theme panels */
-
 html[data-theme="black"] #add-habit.side-open,
 html[data-theme="black"] #edit-habit.side-open,
 html[data-theme="black"] #category-management.side-open,
@@ -984,19 +972,14 @@ html[data-theme="black"] #settings.side-open {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-
         width: 95%;
         max-width: 400px;
-
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-
         border: 2px solid #ffabc1;
         border-radius: 20px;
-
         padding: 7px;
-
         gap: 5px;
     }
 
