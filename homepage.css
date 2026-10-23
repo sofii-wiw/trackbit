@@ -79,6 +79,17 @@ width: 40px;
   box-shadow: 2px 9px 18px rgba(145, 0, 0, 0.486);
 }
 
+
+.bttn {
+  display: grid;
+  align-self: start;
+  border: 2px, solid , rgb(255, 157, 198);
+  border-radius: 15px;
+  font-size: larger;
+  margin-left: 40px;
+  padding: 8px;
+}
+
 .back{
   font-size: 10px;
   background-image: url(https://poempuppy.neocities.org/resources/pixels/laidey.gif);
@@ -159,7 +170,7 @@ h2 {
     scroll-snap-align: start;
     gap: 15vh;
     background: #fff0f5;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 15px;
     box-shadow: 0 4px 10px #ffb3c6;
     color: #8b1e3f;
@@ -173,8 +184,7 @@ h2 {
 }
 
 .analytics-card::-webkit-scrollbar{
-  width: 10px;
-  height: 20px;
+  height: 22px;
 }
 
 .analytics-card::-webkit-scrollbar-track{
@@ -800,6 +810,7 @@ html[data-theme="pink"], html[data-theme="black"]{
 
 
   .analytics-card {
+    justify-content: center;
     width: 100%;
     margin: 12px 0;
     padding: 12px;
@@ -832,12 +843,19 @@ html[data-theme="pink"], html[data-theme="black"]{
     height: 100%;
   }
 
+  .analytics-card::-webkit-scrollbar{
+    width: 80px;
+  }
+
   /* ────୨notes (add note + notes list)ৎ──── */
 
   #add-note{
-    font-size: 15px;
-    width: 100%;
+    font-size: 10px;
+    width: 70%;
     max-width: 400px;
+  }
+  #add-note h2{
+    font-size: small;
   }
 
   #notes {
@@ -926,6 +944,7 @@ html[data-theme="pink"], html[data-theme="black"]{
     transform: scale(1.03);
   }
 
+  
   #sidebar {
         top: auto;
         bottom: 10px;
@@ -1053,3 +1072,7 @@ html[data-theme="black"] #add-note.side-open {
     border-color: #4d4c4d;
     box-shadow: 6px 6px 0 #111, 0 10px 30px rgba(0, 0, 0, .6);
 }
+
+
+
+

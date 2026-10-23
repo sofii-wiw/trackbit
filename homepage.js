@@ -170,7 +170,7 @@ themeSelect.addEventListener('change', (event) => { const selectedTheme = event.
 });
 
 
-const sidebarButtons = document.querySelectorAll("#sidebar button");
+const sidebarButtons = document.querySelectorAll("sidebar button");
 
 const sidePanels = [
     document.getElementById("add-note")
